@@ -1,3 +1,6 @@
+# svn editor
+export SVN_EDITOR=emacs
+
 # Normal Colors                                                                                  
 Black='\e[0;30m'        # Black
 Red='\e[0;31m'          # Red
@@ -65,3 +68,54 @@ module load hwloc/1.11.2
 module load fxt/0.3.1
 module load gnu/mkl/seq/11.2.0
 module load hsl/latest
+
+#-------------------------------------------------------------
+# alias
+#-------------------------------------------------------------
+
+alias df='df -kTh'
+alias lr='ll -R'           #  Recursive ls.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ... 
+
+#-------------------------------------------------------------
+# Handy functions
+#-------------------------------------------------------------
+
+# Find a file with a pattern in name:
+function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
+
+function extract()      # Handy Extract Program
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1     ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1      ;;
+            *.rar)       unrar x $1      ;;
+            *.gz)        gunzip $1       ;;
+            *.tar)       tar xvf $1      ;;
+            *.tbz2)      tar xvjf $1     ;;
+            *.tgz)       tar xvzf $1     ;;
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+# Creates an archive (*.tar.gz) from given directory.
+function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+
+# Create a ZIP archive of a file or folder.
+function makezip() { zip -r "${1%%/}.zip" "$1" ; }
+
+# Make your directories and files access rights sane.
+function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
+
+# Pretty-print of some PATH variables:
+alias path='echo -e ${PATH//:/\\n}'
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+alias modulepath='echo -e ${MODULEPATH//:/\\n}'
