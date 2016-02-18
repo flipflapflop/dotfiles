@@ -217,6 +217,11 @@
 ;; .svg file are managed in sgml-mode
 (setq auto-mode-alist (cons '("\\.svg$" . sgml-mode) auto-mode-alist)) 
 
+;; .cu file are managed in c++-mode
+(setq auto-mode-alist (append '(("\\.cu$" . c++-mode)
+                                ("\\.cuh$" . c++-mode)
+                                ) auto-mode-alist)) 
+
 ;; ;; create a face for function calls in C-mode
 (add-hook 'c-mode-hook
           (lambda ()
