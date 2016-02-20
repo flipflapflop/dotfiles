@@ -59,15 +59,22 @@ fi
 # add local modulefile directory
 module load use.own
 
-# add global modulefile directory
-module use --append /numerical/flopez/modulefiles
-
-# load default modules
-module load gnu/comp/default
-module load hwloc/1.11.2
-module load fxt/0.3.1
-module load gnu/mkl/seq/11.2.0
-module load hsl/latest
+case $HOSTNAME in
+    gauss)
+        # add global modulefile directory
+        module use --append /numerical/flopez/modulefiles
+        # load default modules
+        module load gnu/comp/default
+        module load hwloc/1.11.2
+        module load fxt/0.3.1
+        module load gnu/mkl/seq/11.2.0
+        module load hsl/latest
+        ;;
+    johnconnor)
+        module load hsl/latest
+        module load lapack/3.6.0
+        ;;
+esac
 
 #-------------------------------------------------------------
 # alias
