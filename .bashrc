@@ -1,5 +1,8 @@
+export EDITOR=emacs
+
 # svn editor
-export SVN_EDITOR=emacs
+export SVN_EDITOR="emacs"
+export GIT_EDITOR="emacs"
 
 # Normal Colors                                                                                  
 Black='\e[0;30m'        # Black
