@@ -63,6 +63,11 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/backups" t)))
 
+(add-to-list 'load-path "~/emacs-packages")
+
+(load-library "cuda-mode")
+;; (load-library "derived-mode-ex")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;; CUSTOM VARIABLES
@@ -254,7 +259,6 @@
             (font-lock-add-keywords
              nil
              '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-name-face)) t))) 
-
 
 (add-hook 'f90-mode-hook
                (lambda ()

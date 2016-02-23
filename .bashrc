@@ -72,6 +72,7 @@ case $HOSTNAME in
         module load fxt/0.3.1
         module load gnu/mkl/seq/11.2.0
         module load hsl/latest
+        module load starpu/trunk
         ;;
     johnconnor)
         module load hsl/latest
