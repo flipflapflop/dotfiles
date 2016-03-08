@@ -1,11 +1,40 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
+;; MACROS
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defmacro with-library (symbol &rest body)
+  `(condition-case nil
+       (progn
+         (require ',symbol)
+         ,@body)
+     
+     (error (message (format "I guess we don't have %s available." ',symbol))
+            nil)))
+
+;; (defmacro with-library (symbol &rest body)
+;;   `(when (require ,symbol nil t)
+;;      ,@body))
+
+;; (defmacro with-library (symbol)
+;;   (require ,symbol nil t))
+
+;; (load-library "cuda-mode")
+;; (with-library 'cuda-mode)
+
+;; (setq auto-mode-alist (append '(("\\.cu$" . cuda-mode)
+;;                                 ("\\.cuh$" . cuda-mode)
+;;                                 ) auto-mode-alist)) 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 ;; GENERAL SETTINGS
 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                         
 ;; Turn on font-lock mode 
-(require 'font-lock) 
+(with-library font-lock)
 (global-font-lock-mode t)
 
 ;; remove toolbar
@@ -64,15 +93,14 @@
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/backups" t)))
 
 (add-to-list 'load-path "~/emacs-packages")
-
-(load-library "cuda-mode")
-;; (load-library "derived-mode-ex")
+(add-to-list 'load-path "~/emacs-packages/cuda-mode")
+(add-to-list 'load-path "~/emacs-packages/jdf-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;; CUSTOM VARIABLES
 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; delete region 
 (delete-selection-mode t)
@@ -289,7 +317,7 @@
 ;; 
 ;; CC MODE
 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq-default c-basic-offset 3)
 
@@ -305,3 +333,16 @@
           (lambda ()
             (c-set-offset 'arglist-close '++)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 
+;; CUDA MODE
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; if cuda-mode is available then use it for cu and cuh extensions
+(with-library cuda-mode
+              (setq auto-mode-alist (append '(("\\.cu$" . cuda-mode)
+                                              ("\\.cuh$" . cuda-mode)
+                                              ) auto-mode-alist)))
+;; (load-library "cuda-mode")
+;; (load-library "derived-mode-ex")
