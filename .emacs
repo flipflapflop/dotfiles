@@ -346,3 +346,13 @@
                                               ) auto-mode-alist)))
 ;; (load-library "cuda-mode")
 ;; (load-library "derived-mode-ex")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 
+;; JDF MODE
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(with-library jdf-mode
+              (setq auto-mode-alist (append '(("\\.jdf$" . jdf-mode)
+                                              ) auto-mode-alist)))
