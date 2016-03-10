@@ -20,13 +20,6 @@
 ;; (defmacro with-library (symbol)
 ;;   (require ,symbol nil t))
 
-;; (load-library "cuda-mode")
-;; (with-library 'cuda-mode)
-
-;; (setq auto-mode-alist (append '(("\\.cu$" . cuda-mode)
-;;                                 ("\\.cuh$" . cuda-mode)
-;;                                 ) auto-mode-alist)) 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; GENERAL SETTINGS
