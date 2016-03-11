@@ -92,6 +92,7 @@
 (add-to-list 'load-path "~/emacs-packages/cuda-mode")
 (add-to-list 'load-path "~/emacs-packages/jdf-mode")
 (add-to-list 'load-path "~/emacs-packages/graphviz-dot-mode")
+(add-to-list 'custom-theme-load-path "~/emacs-packages/emacs-color-theme-solarized")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
@@ -360,3 +361,11 @@
 (custom-set-variables
  '(load-home-init-file t t))
 (custom-set-faces)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; solarized theme
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; (load-theme 'solarized t)
+;; (set-frame-parameter nil 'background-mode 'dark)
+;; (enable-theme 'solarized)
