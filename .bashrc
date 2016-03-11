@@ -73,6 +73,7 @@ case $HOSTNAME in
         module load gnu/mkl/seq/11.2.0
         module load hsl/latest
         module load starpu/trunk
+        module load spral/trunk
         export STARPU_FXT_PREFIX=/home/flopez/traces/
         ;;
     johnconnor)
@@ -85,9 +86,7 @@ esac
 # alias
 #-------------------------------------------------------------
 
-alias df='df -kTh'
-alias lr='ll -R'           #  Recursive ls.
-alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ... 
+source ./.bash_aliases
 
 #-------------------------------------------------------------
 # Handy functions

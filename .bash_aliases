@@ -1,0 +1,3 @@
+alias df='df -kTh'
+alias lr='ll -R'           #  Recursive ls.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ... 

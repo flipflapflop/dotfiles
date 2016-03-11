@@ -27,10 +27,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                         
 ;; Turn on font-lock mode 
-(with-library font-lock)
-(global-font-lock-mode t)
+(with-library font-lock
+              (global-font-lock-mode t))
 
 ;; remove toolbar
+;; (with-library tool-bar-mode
+;;               (tool-bar-mode -1))
+
 (if (> emacs-major-version 20)
     (tool-bar-mode -1))
 
@@ -88,6 +91,7 @@
 (add-to-list 'load-path "~/emacs-packages")
 (add-to-list 'load-path "~/emacs-packages/cuda-mode")
 (add-to-list 'load-path "~/emacs-packages/jdf-mode")
+(add-to-list 'load-path "~/emacs-packages/graphviz-dot-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
@@ -327,9 +331,7 @@
             (c-set-offset 'arglist-close '++)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 
 ;; CUDA MODE
-;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; if cuda-mode is available then use it for cu and cuh extensions
@@ -341,11 +343,20 @@
 ;; (load-library "derived-mode-ex")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 
-;; JDF MODE
-;;
+;; JDF mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (with-library jdf-mode
               (setq auto-mode-alist (append '(("\\.jdf$" . jdf-mode)
                                               ) auto-mode-alist)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dot mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(with-library graphviz-dot-mode
+              (setq auto-mode-alist (append '(("\\.dot$" . graphviz-dot-mode)
+                                              ) auto-mode-alist)))
+(custom-set-variables
+ '(load-home-init-file t t))
+(custom-set-faces)
