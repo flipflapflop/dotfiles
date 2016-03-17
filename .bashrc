@@ -87,7 +87,7 @@ case $HOSTNAME in
         module load magma/1.7.0
         ;;
     cn202.scarf.rl.ac.uk)
-        module load automake/1.15
+        module load automake/1.14
         module load autoconf/2.69
         module load gcc/4.8.5
         module load intel/mkl/11.3.1.150
