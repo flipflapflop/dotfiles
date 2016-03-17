@@ -80,6 +80,15 @@ case $HOSTNAME in
         module load hsl/latest
         module load lapack/3.6.0
         ;;
+    cn1g01.gpu.rl.ac.uk)
+        module load cuda/7.5.18
+        export CUDADIR=$CUDA_HOME
+        module load starpu/trunk
+        module load magma/1.7.0
+        ;;
+    cn202.scarf.rl.ac.uk)
+        module load starpu/trunk-nogpu
+        ;;
 esac
 
 #-------------------------------------------------------------
