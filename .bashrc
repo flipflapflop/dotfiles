@@ -81,17 +81,25 @@ case $HOSTNAME in
         module load lapack/3.6.0
         ;;
     cn1g01.gpu.rl.ac.uk)
+        module load automake/1.14.1
+        module load autoconf/2.69
+        module load intel/mkl/11.3.1.150
         module load cuda/7.5.18
         export CUDADIR=$CUDA_HOME
         module load starpu/trunk
         module load magma/1.7.0
+         module load spral/trunk
         ;;
-    cn202.scarf.rl.ac.uk)
-        module load automake/1.14
+    cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
+        module load automake/1.14.1
         module load autoconf/2.69
         module load gcc/4.8.5
         module load intel/mkl/11.3.1.150
+        export LBLAS="$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
+        export LLAPACK="$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
+        module load hwloc/1.10.1
         module load starpu/trunk-nogpu
+        module load spral/trunk
         ;;
 esac
 
