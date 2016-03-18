@@ -71,6 +71,7 @@ case $HOSTNAME in
         module load hwloc/1.11.2
         module load fxt/0.3.1
         module load gnu/mkl/seq/11.2.0
+        module load metis/4.0.3
         module load hsl/latest
         module load starpu/trunk
         module load spral/trunk
@@ -93,12 +94,13 @@ case $HOSTNAME in
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
-        module load gcc/4.8.5
+        module load gcc/5.3.0
         module load intel/mkl/11.3.1.150
         export LBLAS="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
         export LLAPACK="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
-        module load hwloc/1.10.1
+        module load hwloc/1.11.2
         module load starpu/trunk-nogpu
+        module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk
         ;;
@@ -108,7 +110,7 @@ esac
 # alias
 #-------------------------------------------------------------
 
-source ./.bash_aliases
+source $HOME/.bash_aliases
 
 #-------------------------------------------------------------
 # Handy functions
