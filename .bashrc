@@ -82,7 +82,9 @@ case $HOSTNAME in
         module load lapack/3.6.0
         module load cuda/7.5
         module load hwloc/1.11.2
+        module load metis/4.0.3
         module load starpu/trunk
+        module load spral/trunk
         ;;
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
