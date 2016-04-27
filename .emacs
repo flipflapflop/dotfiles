@@ -369,3 +369,10 @@
 ;; (load-theme 'solarized t)
 ;; (set-frame-parameter nil 'background-mode 'dark)
 ;; (enable-theme 'solarized)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; org-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((gnuplot . t)))
