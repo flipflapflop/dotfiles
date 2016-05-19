@@ -70,12 +70,13 @@ case $HOSTNAME in
         module load gnu/comp/default
         module load hwloc/1.11.2
         module load fxt/0.3.1
+        module load mpi/local
         module load gnu/mkl/seq/11.2.0
         module load metis/4.0.3
         module load starpu/trunk
         module load parsec/devel
         module load hsl/latest
-        module load spral/intel/trunk
+        module load spral/trunk
         export STARPU_FXT_PREFIX=/home/flopez/traces/
         ;;
     johnconnor)
