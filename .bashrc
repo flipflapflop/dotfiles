@@ -107,7 +107,7 @@ case $HOSTNAME in
         export LLAPACK="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
         module load hwloc/1.11.2
         module load starpu/trunk-nogpu-nofxt
-        module load parsec/devel
+        module load parsec-icldistcomp/trunk
         module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk
