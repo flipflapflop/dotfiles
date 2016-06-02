@@ -74,7 +74,7 @@ case $HOSTNAME in
         module load gnu/mkl/seq/11.2.0
         module load metis/4.0.3
         module load starpu/trunk
-        module load parsec/devel
+        module load parsec-icldistcomp/trunk
         module load hsl/latest
         module load spral/trunk
         export STARPU_FXT_PREFIX=/home/flopez/traces/
