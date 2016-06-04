@@ -85,7 +85,9 @@ case $HOSTNAME in
         module load cuda/7.5
         module load hwloc/1.11.2
         module load metis/4.0.3
+        module load mpi/local
         module load starpu/trunk
+        module load parsec/trunk
         module load spral/trunk
         ;;
     cn1g01.gpu.rl.ac.uk)
