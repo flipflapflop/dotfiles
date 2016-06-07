@@ -70,7 +70,7 @@ case $HOSTNAME in
         module load gnu/comp/default
         module load hwloc/1.11.2
         module load fxt/0.3.1
-        module load mpi/local
+        module load openmpi/1.10.2
         module load gnu/mkl/seq/11.2.0
         module load metis/4.0.3
         module load starpu/trunk
