@@ -96,7 +96,7 @@ case $HOSTNAME in
         module load intel/mkl/11.2.0.090
         module load cuda/7.5.18
         export CUDADIR=$CUDA_HOME
-        module load starpu/trunk
+        module load starpu/trunk-nofxt
         module load magma/1.7.0
          module load spral/trunk
         ;;
