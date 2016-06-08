@@ -98,7 +98,8 @@ case $HOSTNAME in
         export CUDADIR=$CUDA_HOME
         module load starpu/trunk-nofxt
         module load magma/1.7.0
-         module load spral/trunk
+        module load hsl/latest
+        module load spral/trunk
         ;;
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
         module load automake/1.14.1
