@@ -93,12 +93,14 @@ case $HOSTNAME in
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
+        module load gcc/5.3.0
         module load intel/mkl/11.2.0.090
         module load cuda/7.5.18
         export CUDADIR=$CUDA_HOME
         module load hwloc/1.11.2
         module load starpu/trunk-nofxt
         module load magma/1.7.0
+        module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk
         ;;
