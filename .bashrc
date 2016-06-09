@@ -102,7 +102,7 @@ case $HOSTNAME in
         module load magma/1.7.0
         module load metis/4.0.3
         module load hsl/latest
-        module load spral/trunk
+        module load spral/trunk-gnu-4.9.2
         ;;
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
         module load automake/1.14.1
