@@ -86,7 +86,7 @@ case $HOSTNAME in
         module load hwloc/1.11.2
         module load metis/4.0.3
         module load mpi/local
-        module load starpu/trunk
+        module load starpu/trunk-nogpu
         module load parsec/trunk
         module load spral/trunk
         ;;
