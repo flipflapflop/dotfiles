@@ -119,6 +119,7 @@ case $HOSTNAME in
         module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk
+        module use --append /home/cseg/numanlys/scarf523/modulefiles
         ;;
 esac
 
