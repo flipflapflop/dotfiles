@@ -79,6 +79,7 @@ case $HOSTNAME in
         module load spral/trunk
         export STARPU_FXT_PREFIX=/home/flopez/traces/
         ;;
+
     johnconnor)
         module load hsl/latest
         module load lapack/3.6.0
@@ -90,6 +91,7 @@ case $HOSTNAME in
         module load parsec/trunk
         module load spral/trunk
         ;;
+
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
@@ -103,7 +105,9 @@ case $HOSTNAME in
         module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk-gnu-4.9.2
+        module use --append /home/cseg/numanlys/modules
         ;;
+
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
@@ -120,6 +124,7 @@ case $HOSTNAME in
         module load hsl/latest
         module load spral/trunk
         module use --append /home/cseg/numanlys/scarf523/modulefiles
+        module use --append /home/cseg/numanlys/modules
         ;;
 esac
 
