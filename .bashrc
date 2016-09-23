@@ -126,6 +126,9 @@ case $HOSTNAME in
         module use --append /home/cseg/numanlys/scarf523/modulefiles
         module use --append /home/cseg/numanlys/modules
         ;;
+    scarf.rl.ac.uk)
+        module use --append /home/cseg/numanlys/modules
+        ;;
 esac
 
 export CC=gcc
