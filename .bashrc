@@ -76,7 +76,8 @@ case $HOSTNAME in
         module load starpu/trunk
         module load parsec-icldistcomp/trunk
         module load hsl/latest
-        module load spral/trunk
+        # module load spral/trunk
+        module load spral/cpu_ssids
         export STARPU_FXT_PREFIX=/home/flopez/traces/
         ;;
 
