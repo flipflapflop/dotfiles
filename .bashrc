@@ -113,7 +113,7 @@ case $HOSTNAME in
         module load automake/1.14.1
         module load autoconf/2.69
         module load cmake/3.4.3
-        module load gcc/5.3.0
+        module load gcc/6.1.0
         module load intel/mkl/11.3.1.150
         export LBLAS="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
         export LLAPACK="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
@@ -123,7 +123,7 @@ case $HOSTNAME in
         module load parsec-icldistcomp/trunk
         module load metis/4.0.3
         module load hsl/latest
-        module load spral/trunk
+        module load spral/master-gnu-6.1.0
         module use --append /home/cseg/numanlys/scarf523/modulefiles
         module use --append /home/cseg/numanlys/modules
         ;;
