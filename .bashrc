@@ -73,7 +73,7 @@ case $HOSTNAME in
         module load openmpi/1.10.2
         module load gnu/mkl/seq/11.2.0
         module load metis/4.0.3
-        module load starpu/trunk
+        module load starpu/trunk-fxt
         module load parsec-icldistcomp/trunk
         module load hsl/latest
         # module load spral/trunk
