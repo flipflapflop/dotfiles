@@ -1,0 +1,26 @@
+[user]
+	name = flopez
+	email = florent.lopez@stfc.ac.uk
+[core]
+	editor = emacs -nw
+[push]
+	default = simple
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+[color "branch"]
+       current = yellow reverse
+       local = yellow
+       remote = green
+
+[color "diff"]
+       meta = yellow bold
+       frag = magenta bold
+       old = red bold
+       new = green bold
+
+[color "status"]
+       added = yellow
+       changed = green
+       untracked = cyan
