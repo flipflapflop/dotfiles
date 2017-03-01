@@ -91,7 +91,7 @@ case $HOSTNAME in
         module load hsl/latest
         module load lapack/3.6.0
         module load cuda/7.5
-        module load hwloc/1.11.2
+        module load hwloc/1.11.6
         module load metis/4.0.3
         module load mpi/local
         module load starpu/trunk-nogpu
