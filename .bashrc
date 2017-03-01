@@ -59,6 +59,12 @@ fi
 # module
 #-------------------------------------------------------------
 
+case $HOSTNAME in
+    johnconnor)
+        source /usr/share/modules/init/bash
+        ;;
+esac
+
 # add local modulefile directory
 module load use.own
 
