@@ -102,10 +102,10 @@ case $HOSTNAME in
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
-        module load gcc/4.9.2
+        module load gcc/5.3.0
         module load intel/mkl/11.2.0.090
 # CUDA settings
-        module load cuda/7.5.18
+        module load cuda/8.0.44
         export CUDADIR=$CUDA_HOME
         module load hwloc/1.11.2
         module load starpu/trunk-gpu
