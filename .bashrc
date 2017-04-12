@@ -104,6 +104,7 @@ case $HOSTNAME in
         module load autoconf/2.69
         module load gcc/4.9.2
         module load intel/mkl/11.2.0.090
+# CUDA settings
         module load cuda/7.5.18
         export CUDADIR=$CUDA_HOME
         module load hwloc/1.11.2
@@ -113,6 +114,8 @@ case $HOSTNAME in
         module load hsl/latest
         module load spral/trunk-gnu-4.9.2
         module use --append /home/cseg/numanlys/modules
+# OMP setting
+        export OMP_PROC_BIND=true
         ;;
 
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
