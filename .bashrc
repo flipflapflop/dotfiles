@@ -107,7 +107,7 @@ case $HOSTNAME in
 # CUDA settings
         module load cuda/8.0.44
         export CUDADIR=$CUDA_HOME
-        module load hwloc/1.11.2
+        module load hwloc/gpu-1.11.4
         module load starpu/trunk-gpu
         module load magma/1.7.0
         module load metis/4.0.3
