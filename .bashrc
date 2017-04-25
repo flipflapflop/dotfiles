@@ -129,7 +129,7 @@ case $HOSTNAME in
         module load hwloc/1.11.4
         module load openmpi/1.10.2
         module load starpu/trunk
-        module load parsec-icldistcomp/trunk
+        module load parsec/master
         module load metis/4.0.3
         module load hsl/latest
         module load spral/master-gnu-6.1.0
