@@ -55,6 +55,10 @@ else
     export PS1="$ "
 fi
 
+export CC=gcc
+export CXX=g++
+export FC=gfortran
+
 #-------------------------------------------------------------
 # module
 #-------------------------------------------------------------
@@ -139,11 +143,34 @@ case $HOSTNAME in
     scarf.rl.ac.uk)
         module use --append /home/cseg/numanlys/modules
         ;;
+    phobos.icl.utk.edu)
+        # Compiler
+        ## gnu
+        export CC=/opt/bin/gcc
+        export CXX=/opt/bin/g++
+        export FC=/opt/bin/gfortran
+        # Metis
+        export METISDIR=/home/flopez/metis-4.0.3
+        # HSL packages
+        export HSLPACKDIR=/home/flopez/hsl/packages
+        # Intel MKL
+        export MKLROOT=/opt/intel_mkl2017/mkl/
+        # Intel libraries
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64
+        # SPRAL
+        ## gnu
+        export SPRALDIR=/home/flopez/builds/spral/gnu
+        # Parsec
+        ## gnu
+        export PARSECSRCDIR=/home/flopez/parsec
+        export PARSECDIR=/home/flopez/builds/parsec/master/gnu/
+        export PARSECPP=$PARSECDIR/parsec/interfaces/ptg/ptg-compiler/parsec_ptgpp
+        # LD Library Path
+        export LD_LIBRARY_PATH=/lib64:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/opt/lib64:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
+        ;;
 esac
-
-export CC=gcc
-export CXX=g++
-export FC=gfortran
 
 #-------------------------------------------------------------
 # alias
