@@ -112,7 +112,7 @@ case $HOSTNAME in
         module load magma/1.7.0
         module load metis/4.0.3
         module load hsl/latest
-        module load spral/trunk-gnu-4.9.2
+        module load spral/master-gnu-5.3.0
         module use --append /home/cseg/numanlys/modules
 # OMP setting
         export OMP_PROC_BIND=true
