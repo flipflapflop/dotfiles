@@ -63,6 +63,12 @@ export FC=gfortran
 # module
 #-------------------------------------------------------------
 
+case $HOSTNAME in
+    johnconnor)
+        source /usr/share/modules/init/bash
+        ;;
+esac
+
 # add local modulefile directory
 module load use.own
 
@@ -89,7 +95,7 @@ case $HOSTNAME in
         module load hsl/latest
         module load lapack/3.6.0
         module load cuda/7.5
-        module load hwloc/1.11.2
+        module load hwloc/1.11.6
         module load metis/4.0.3
         module load mpi/local
         module load starpu/trunk-nogpu
@@ -100,17 +106,20 @@ case $HOSTNAME in
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
-        module load gcc/4.9.2
+        module load gcc/5.3.0
         module load intel/mkl/11.2.0.090
-        module load cuda/7.5.18
+# CUDA settings
+        module load cuda/8.0.44
         export CUDADIR=$CUDA_HOME
-        module load hwloc/1.11.2
+        module load hwloc/gpu-1.11.4
         module load starpu/trunk-gpu
         module load magma/1.7.0
         module load metis/4.0.3
         module load hsl/latest
         module load spral/trunk-gnu-4.9.2
         module use --append /home/cseg/numanlys/modules
+# OMP setting
+        export OMP_PROC_BIND=true
         ;;
 
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
@@ -124,7 +133,7 @@ case $HOSTNAME in
         module load hwloc/1.11.4
         module load openmpi/1.10.2
         module load starpu/trunk
-        module load parsec-icldistcomp/trunk
+        module load parsec/master
         module load metis/4.0.3
         module load hsl/latest
         module load spral/master-gnu-6.1.0
