@@ -1,3 +1,4 @@
+
 export EDITOR=emacs
 
 # svn editor
@@ -170,6 +171,9 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/opt/lib64:$LD_LIBRARY_PATH
         export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
         ;;
+    dancer.icl.utk.edu | dancer*)
+        module load gcc/6.3.0
+        
 esac
 
 #-------------------------------------------------------------
