@@ -172,6 +172,7 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
         ;;
     dancer.icl.utk.edu | dancer*)
+        export ACLOCAL_PATH=/usr/share/aclocal
         module load gcc/6.3.0
         
 esac
