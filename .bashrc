@@ -174,7 +174,22 @@ case $HOSTNAME in
     dancer.icl.utk.edu | dancer*)
         export ACLOCAL_PATH=/usr/share/aclocal
         module load gcc/6.3.0
-        
+        ;;
+    *.hpc2n.umu.se)
+        module load GCC/6.2.0-2.27
+        module load CMake/3.5.2
+        module load hwloc/1.11.4
+        module load gimkl/2016.11
+        export HSLDIR=/home/f/flopez/hsl2013
+        export HSLPACKDIR=/home/f/flopez/hsl2013/packages
+        # GNU Libtool
+        export PATH=/home/f/flopez/builds/libtool/2.4.6:$PATH
+        # Own module files
+        module use /home/f/flopez/modulefiles
+        module load metis/4.0.3
+        module load starpu/trunk
+        module load spral/master-gnu-6.2.0
+        ;;
 esac
 
 #-------------------------------------------------------------
