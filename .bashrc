@@ -101,7 +101,7 @@ case $HOSTNAME in
         module load mpi/local
         module load starpu/trunk-nogpu
         module load parsec/trunk
-        module load spral/trunk
+        module load spral/master
         ;;
 
     cn1g01.gpu.rl.ac.uk)
