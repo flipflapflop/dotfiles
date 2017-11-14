@@ -76,6 +76,9 @@
 ;; (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+;; cua-mode for using standard copy, paste and cut key bindings
+(cua-mode 1)
+
 ;; identify the machine
 (defvar gauss   (equal system-name "gauss"))
 
@@ -170,8 +173,11 @@
 (global-set-key "\C-c;" 'comment-region)
 (global-set-key "\C-c:" 'uncomment-region)
 
-;; undo
-(global-set-key "\C-z" 'undo) ; [Ctrl+z]
+
+;; undo, done in cua-mode!
+;; (global-set-key "\C-z" 'undo) ; [Ctrl+z]
+;; redo
+;; (global-set-key (kbd "C-S-z") 'redo) ; [Ctrl+Shift+z]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
