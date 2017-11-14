@@ -171,7 +171,7 @@
 (global-set-key "\C-c:" 'uncomment-region)
 
 ;; undo
-(global-set-key "\C-z" 'undo)
+(global-set-key "\C-z" 'undo) ; [Ctrl+z]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 

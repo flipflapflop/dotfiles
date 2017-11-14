@@ -80,7 +80,7 @@ case $HOSTNAME in
         module load gnu/mkl/seq/11.2.0
         module load metis/4.0.3
         module load starpu/trunk-fxt
-        module load parsec-icldistcomp/master
+        module load parsec/master-trace
         module load hsl/latest
         # module load spral/trunk
         module load spral/master
