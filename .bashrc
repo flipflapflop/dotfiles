@@ -1,3 +1,4 @@
+
 export EDITOR=emacs
 
 # svn editor
@@ -55,6 +56,10 @@ else
     export PS1="$ "
 fi
 
+export CC=gcc
+export CXX=g++
+export FC=gfortran
+
 #-------------------------------------------------------------
 # module
 #-------------------------------------------------------------
@@ -96,7 +101,7 @@ case $HOSTNAME in
         module load mpi/local
         module load starpu/trunk-nogpu
         module load parsec/trunk
-        module load spral/trunk
+        module load spral/master
         ;;
 
     cn1g01.gpu.rl.ac.uk)
@@ -112,7 +117,7 @@ case $HOSTNAME in
         module load magma/1.7.0
         module load metis/4.0.3
         module load hsl/latest
-        module load spral/trunk-gnu-4.9.2
+        module load spral/master-gnu-5.3.0
         module use --append /home/cseg/numanlys/modules
 # OMP setting
         export OMP_PROC_BIND=true
@@ -139,11 +144,53 @@ case $HOSTNAME in
     scarf.rl.ac.uk)
         module use --append /home/cseg/numanlys/modules
         ;;
+    phobos.icl.utk.edu)
+        # Compiler
+        ## gnu
+        export CC=/opt/bin/gcc
+        export CXX=/opt/bin/g++
+        export FC=/opt/bin/gfortran
+        # Metis
+        export METISDIR=/home/flopez/metis-4.0.3
+        # HSL packages
+        export HSLPACKDIR=/home/flopez/hsl/packages
+        # Intel MKL
+        export MKLROOT=/opt/intel_mkl2017/mkl/
+        # Intel libraries
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64
+        # SPRAL
+        ## gnu
+        export SPRALDIR=/home/flopez/builds/spral/gnu
+        # Parsec
+        ## gnu
+        export PARSECSRCDIR=/home/flopez/parsec
+        export PARSECDIR=/home/flopez/builds/parsec/master/gnu/
+        export PARSECPP=$PARSECDIR/parsec/interfaces/ptg/ptg-compiler/parsec_ptgpp
+        # LD Library Path
+        export LD_LIBRARY_PATH=/lib64:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/opt/lib64:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
+        ;;
+    dancer.icl.utk.edu | dancer*)
+        export ACLOCAL_PATH=/usr/share/aclocal
+        module load gcc/6.3.0
+        ;;
+    *.hpc2n.umu.se)
+        module load GCC/6.2.0-2.27
+        module load CMake/3.5.2
+        module load hwloc/1.11.4
+        module load gimkl/2016.11
+        export HSLDIR=/home/f/flopez/hsl2013
+        export HSLPACKDIR=/home/f/flopez/hsl2013/packages
+        # GNU Libtool
+        export PATH=/home/f/flopez/builds/libtool/2.4.6:$PATH
+        # Own module files
+        module use /home/f/flopez/modulefiles
+        module load metis/4.0.3
+        module load starpu/trunk
+        module load spral/master-gnu-6.2.0
+        ;;
 esac
-
-export CC=gcc
-export CXX=g++
-export FC=gfortran
 
 #-------------------------------------------------------------
 # alias
