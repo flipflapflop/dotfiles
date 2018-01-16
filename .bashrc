@@ -176,10 +176,12 @@ case $HOSTNAME in
         module load gcc/6.3.0
         ;;
     *.hpc2n.umu.se)
-        module load GCC/6.2.0-2.27
-        module load CMake/3.5.2
-        module load hwloc/1.11.4
-        module load gimkl/2016.11
+        module load GCC/6.4.0-2.28
+        module load GCCcore/6.4.0
+        module load binutils/2.28
+        module load CMake/3.9.1
+        module load hwloc/1.11.8
+        module load gimkl/2017b
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
         # GNU Libtool
