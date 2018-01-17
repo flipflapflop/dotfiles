@@ -189,6 +189,7 @@ case $HOSTNAME in
         # Own module files
         module use /home/f/flopez/modulefiles
         module load metis/4.0.3
+        module load scotch/6.0.4
         module load starpu/trunk
         module load spral/master-gnu-6.2.0
         ;;
