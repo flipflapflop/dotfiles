@@ -68,6 +68,9 @@ case $HOSTNAME in
     johnconnor)
         source /usr/share/modules/init/bash
         ;;
+    saint-exupery)
+        source /usr/local/Modules/init/bash
+        ;;
 esac
 
 # add local modulefile directory
@@ -192,6 +195,10 @@ case $HOSTNAME in
         module load scotch/6.0.4
         module load starpu/trunk
         module load spral/master-gnu-6.2.0
+        ;;
+    saint-exupery)
+        module load fxt/0.3.7
+        module load starpu/trunk
         ;;
 esac
 
