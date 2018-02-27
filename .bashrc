@@ -127,6 +127,7 @@ case $HOSTNAME in
         ;;
 
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
+        export ACLOCAL_PATH=/usr/share/aclocal
         module load automake/1.14.1
         module load autoconf/2.69
         module load cmake/3.4.3
@@ -136,7 +137,7 @@ case $HOSTNAME in
         export LLAPACK="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
         module load hwloc/1.11.6
         # module load openmpi/1.10.2
-        module load starpu/1.2.3-fxt
+        module load starpu/1.2.3
         module load parsec/master
         module load metis/4.0.3
         module load hsl/latest
