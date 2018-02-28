@@ -127,6 +127,8 @@ case $HOSTNAME in
         ;;
 
     cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
+        export OMP_CANCELLATION=true
+        export OMP_PROC_BIND=true
         export ACLOCAL_PATH=/usr/share/aclocal
         module load automake/1.14.1
         module load autoconf/2.69
