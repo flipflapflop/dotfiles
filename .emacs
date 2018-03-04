@@ -382,3 +382,9 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages '((gnuplot . t)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Spell checking
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-hook 'latex-mode-hook 'turn-on-flyspell)
+(setq ispell-dictionary "en_GB-ize") ;set the default dictionary
