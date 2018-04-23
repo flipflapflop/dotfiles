@@ -203,6 +203,9 @@ case $HOSTNAME in
     saint-exupery)
         module load fxt/0.3.7
         module load starpu/trunk
+        module load spral/master-gcc-7.2.0
+        module load mkl/2018.1.163
+        module load metis/4.0.3
         ;;
 esac
 
