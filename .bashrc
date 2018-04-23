@@ -131,6 +131,7 @@ case $HOSTNAME in
         export OMP_PROC_BIND=true
         export ACLOCAL_PATH=/usr/share/aclocal
         export LD_LIBRARY_PATH=/home/cseg/numanlys/sw/metis/lib-4.0.3:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/home/cseg/numanlys/jhogg/src/gtg-0.2-2/src/.libs:$LD_LIBRARY_PATH
         module load automake/1.14.1
         module load autoconf/2.69
         module load cmake/3.4.3
