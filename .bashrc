@@ -184,6 +184,8 @@ case $HOSTNAME in
         module load gcc/6.3.0
         ;;
     *.hpc2n.umu.se)
+        export OMP_CANCELLATION=true
+        export OMP_PROC_BIND=true
         module load GCC/6.4.0-2.28
         module load GCCcore/6.4.0
         module load binutils/2.28
@@ -199,7 +201,7 @@ case $HOSTNAME in
         module load metis/4.0.3
         module load scotch/6.0.4
         module load starpu/trunk
-        module load spral/master-gnu-6.2.0
+        module load spral/master-gnu-6.4.0
         ;;
     saint-exupery)
         module load fxt/0.3.7
