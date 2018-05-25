@@ -186,6 +186,7 @@ case $HOSTNAME in
     *.hpc2n.umu.se)
         export OMP_CANCELLATION=true
         export OMP_PROC_BIND=true
+        export LD_LIBRARY_PATH=/home/f/flopez/pfs/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         module load GCC/6.4.0-2.28
         module load GCCcore/6.4.0
         module load binutils/2.28
