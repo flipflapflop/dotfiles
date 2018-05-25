@@ -201,7 +201,7 @@ case $HOSTNAME in
         module use /home/f/flopez/modulefiles
         module load metis/4.0.3
         module load scotch/6.0.4
-        module load starpu/trunk
+        module load starpu/master
         module load spral/master-gnu-6.4.0
         ;;
     saint-exupery)
