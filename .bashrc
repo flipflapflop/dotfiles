@@ -92,7 +92,7 @@ case $HOSTNAME in
         module load hsl/latest
         # module load spral/trunk
         module load spral/master
-        export STARPU_FXT_PREFIX=/home/flopez/traces/
+        export STARPU_FXT_PREFIX=/home/flopez/traces/tmp/
         ;;
 
     johnconnor)
