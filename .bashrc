@@ -221,6 +221,7 @@ case $HOSTNAME in
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
         module load starpu/master
+        metis/4.0.3
         module load spral/master-gnu-6.3.0
 esac
 
