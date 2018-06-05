@@ -218,6 +218,10 @@ case $HOSTNAME in
         export OMP_PROC_BIND=true
         export OMP_PLACES=cores
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
+        export OMP_NUM_THREADS=20
+        module load fxt/0.3.7
+        module load starpu/master
+        module load spral/master-gnu-6.3.0
 esac
 
 #-------------------------------------------------------------
