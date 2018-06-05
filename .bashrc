@@ -211,6 +211,13 @@ case $HOSTNAME in
         module load mkl/2018.1.163
         module load metis/4.0.3
         ;;
+    *.alembert|saturn.icl.utk.edu)
+        module use --append $HOME/privatemodules
+        module load gcc/6.3.0
+        export OMP_CANCELLATION=true
+        export OMP_PROC_BIND=true
+        export OMP_PLACES=cores
+        export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
 esac
 
 #-------------------------------------------------------------
