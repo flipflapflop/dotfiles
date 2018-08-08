@@ -110,11 +110,12 @@ case $HOSTNAME in
     cn1g01.gpu.rl.ac.uk)
         module load automake/1.14.1
         module load autoconf/2.69
-        module load gcc/5.3.0
-        module load intel/mkl/11.2.0.090
+        gcc/6.2.0
+        module load intel/mkl/11.3.1.150
+        module load cuda/9.1.85
 # CUDA settings
-        module load cuda/8.0.44
         export CUDADIR=$CUDA_HOME
+        export CUDA_DIR=$CUDA_HOME
         module load hwloc/gpu-1.11.4
         module load starpu/trunk-gpu
         module load magma/1.7.0
@@ -179,10 +180,7 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/opt/lib64:$LD_LIBRARY_PATH
         export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
         ;;
-    dancer.icl.utk.edu | dancer*)
-        export ACLOCAL_PATH=/usr/share/aclocal
-        module load gcc/6.3.0
-        ;;
+
     *.hpc2n.umu.se)
         export OMP_CANCELLATION=true
         export OMP_PROC_BIND=true
@@ -211,6 +209,7 @@ case $HOSTNAME in
         module load mkl/2018.1.163
         module load metis/4.0.3
         ;;
+
     *.alembert|saturn.icl.utk.edu)
         module use --append $HOME/privatemodules
         module load gcc/6.3.0
