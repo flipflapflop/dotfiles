@@ -222,7 +222,7 @@ case $HOSTNAME in
         module load fxt/0.3.7
         module load hwloc/2.0.1
         module load starpu/master
-        metis/4.0.3
+        module load metis/4.0.3
         module load spral/master-gnu-6.3.0
 esac
 
