@@ -211,6 +211,7 @@ case $HOSTNAME in
         ;;
 
     *.alembert|saturn.icl.utk.edu)
+        export CUDA_HOME=$CUDADIR
         module use --append $HOME/privatemodules
         module load gcc/6.3.0
         export OMP_CANCELLATION=true
