@@ -220,7 +220,7 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
-        module load hwloc/2.0.1
+        module load hwloc/1.11.10
         module load starpu/master
         module load metis/4.0.3
         module load spral/master-gnu-6.3.0
