@@ -224,6 +224,8 @@ case $HOSTNAME in
         module load starpu/master
         module load metis/4.0.3
         module load spral/master-gnu-6.3.0
+
+        export STARPU_PREFETCH=1
 esac
 
 #-------------------------------------------------------------
