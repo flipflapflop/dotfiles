@@ -226,6 +226,7 @@ case $HOSTNAME in
         module load spral/master-gnu-6.3.0
 
         export STARPU_PREFETCH=1
+        export STARPU_MALLOC_PINNED=0
 esac
 
 #-------------------------------------------------------------
