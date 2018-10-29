@@ -61,6 +61,14 @@ export CXX=g++
 export FC=gfortran
 
 #-------------------------------------------------------------
+# OpenMP
+#-------------------------------------------------------------
+
+export OMP_NESTED=true
+export OMP_CANCELLATION=true
+export OMP_PROC_BIND=true
+
+#-------------------------------------------------------------
 # module
 #-------------------------------------------------------------
 
@@ -220,8 +228,6 @@ case $HOSTNAME in
         # Load default CUDA version
         module load cuda
         export CUDA_HOME=$CUDADIR
-        export OMP_CANCELLATION=true
-        export OMP_PROC_BIND=true
         export OMP_PLACES=cores
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
