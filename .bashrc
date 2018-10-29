@@ -212,9 +212,11 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module use cmake/3.8.1
-        export CUDA_HOME=$CUDADIR
         module use --append $HOME/privatemodules
         module load gcc/6.3.0
+        # Load default CUDA version
+        module load cuda
+        export CUDA_HOME=$CUDADIR
         export OMP_CANCELLATION=true
         export OMP_PROC_BIND=true
         export OMP_PLACES=cores
