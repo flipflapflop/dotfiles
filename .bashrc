@@ -150,9 +150,11 @@ case $HOSTNAME in
         module use --append /home/cseg/numanlys/scarf523/modulefiles
         module use --append /home/cseg/numanlys/modules
         ;;
+
     scarf.rl.ac.uk)
         module use --append /home/cseg/numanlys/modules
         ;;
+
     phobos.icl.utk.edu)
         # Compiler
         ## gnu
@@ -202,6 +204,7 @@ case $HOSTNAME in
         module load starpu/master
         module load spral/master-gnu-6.4.0
         ;;
+
     saint-exupery)
         module load fxt/0.3.7
         module load starpu/trunk
