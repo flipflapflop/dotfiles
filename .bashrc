@@ -228,7 +228,8 @@ case $HOSTNAME in
         # Load default CUDA version
         module load cuda
         export CUDA_HOME=$CUDADIR
-        export OMP_PLACES=cores
+        # export OMP_PLACES=cores
+        xport OMP_PLACES="{0:20},{10:20}"
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
