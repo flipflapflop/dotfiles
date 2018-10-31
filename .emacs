@@ -4,6 +4,13 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (defmacro with-library (symbol &rest body)
   `(condition-case nil
        (progn
@@ -97,6 +104,12 @@
 (add-to-list 'load-path "~/emacs-packages/graphviz-dot-mode")
 (add-to-list 'custom-theme-load-path "~/emacs-packages/emacs-color-theme-solarized")
 
+;; packages
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;; CUSTOM VARIABLES
@@ -365,8 +378,31 @@
               (setq auto-mode-alist (append '(("\\.dot$" . graphviz-dot-mode)
                                               ) auto-mode-alist)))
 (custom-set-variables
- '(load-home-init-file t t))
-(custom-set-faces)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(load-home-init-file t t)
+ '(package-selected-packages (quote (magit))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:foreground "white" :background "black" :family "DejaVu Sans Mono"))))
+ '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
+ '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
+ '(font-lock-comment-face ((t (:italic t :foreground "#5F5A60"))))
+ '(font-lock-function-name-face ((t (:foreground "gold"))))
+ '(font-lock-keyword-face ((t (:foreground "springgreen"))))
+ '(font-lock-string-face ((t (:foreground "LightSteelBlue"))))
+ '(font-lock-type-face ((t (:foreground "PaleGreen"))))
+ '(font-lock-variable-name-face ((t (:foreground "Coral"))))
+ '(font-lock-warning-face ((t (:foreground "Red"))))
+ '(menu ((((type x-toolkit)) (:background "light slate gray" :foreground "white" :box (:line-width 2 :color "grey75" :style released-button)))))
+ '(mode-line ((t (:foreground "black" :background "light slate gray"))))
+ '(region ((t (:background "white" :foreground "black"))))
+ '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "white" :box (:line-width 1 :style released-button))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; solarized theme
