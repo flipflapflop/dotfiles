@@ -61,6 +61,14 @@ export CXX=g++
 export FC=gfortran
 
 #-------------------------------------------------------------
+# OpenMP
+#-------------------------------------------------------------
+
+export OMP_NESTED=true
+export OMP_CANCELLATION=true
+export OMP_PROC_BIND=true
+
+#-------------------------------------------------------------
 # module
 #-------------------------------------------------------------
 
@@ -74,7 +82,7 @@ case $HOSTNAME in
 esac
 
 # add local modulefile directory
-module load use.own
+module use --append $HOME/privatemodules
 
 case $HOSTNAME in
     gauss)
@@ -150,9 +158,11 @@ case $HOSTNAME in
         module use --append /home/cseg/numanlys/scarf523/modulefiles
         module use --append /home/cseg/numanlys/modules
         ;;
+
     scarf.rl.ac.uk)
         module use --append /home/cseg/numanlys/modules
         ;;
+
     phobos.icl.utk.edu)
         # Compiler
         ## gnu
@@ -202,6 +212,7 @@ case $HOSTNAME in
         module load starpu/master
         module load spral/master-gnu-6.4.0
         ;;
+
     saint-exupery)
         module load fxt/0.3.7
         module load starpu/trunk
@@ -211,20 +222,23 @@ case $HOSTNAME in
         ;;
 
     *.alembert|saturn.icl.utk.edu)
-        module use cmake/3.8.1
-        export CUDA_HOME=$CUDADIR
+        module purge # clean loaded modules
+        module load cmake
         module use --append $HOME/privatemodules
-        module load gcc/6.3.0
-        export OMP_CANCELLATION=true
-        export OMP_PROC_BIND=true
-        export OMP_PLACES=cores
+        module load gcc/6.4.0
+        # Load default CUDA version
+        module load cuda
+        export CUDA_HOME=$CUDADIR
+        # export OMP_PLACES=cores
+        export OMP_PLACES="{0:20},{10:20}"
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
         module load hwloc/1.11.10
-        module load starpu/master
+        module load starpu/master-gpu
         module load metis/4.0.3
-        module load spral/master-gnu-6.3.0
+        module load intel-mkl/2017.4.239
+        module load spral/master-gnu-6.4.0
 
         export STARPU_PREFETCH=1
         export STARPU_MALLOC_PINNED=0

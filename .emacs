@@ -104,12 +104,11 @@
 (add-to-list 'load-path "~/emacs-packages/graphviz-dot-mode")
 (add-to-list 'custom-theme-load-path "~/emacs-packages/emacs-color-theme-solarized")
 
-;; packages
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  )
+;; Add Melpa package archive
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;; CUSTOM VARIABLES
