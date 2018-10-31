@@ -214,8 +214,9 @@ case $HOSTNAME in
         ;;
 
     saint-exupery)
+        module load hwloc/1.11.11
         module load fxt/0.3.7
-        module load starpu/trunk
+        module load starpu/master
         module load spral/master-gcc-7.2.0
         module load mkl/2018.1.163
         module load metis/4.0.3
@@ -242,6 +243,7 @@ case $HOSTNAME in
 
         export STARPU_PREFETCH=1
         export STARPU_MALLOC_PINNED=0
+        ;;
 esac
 
 #-------------------------------------------------------------
