@@ -237,6 +237,7 @@ case $HOSTNAME in
         module load hwloc/1.11.10
         module load starpu/master-gpu
         module load metis/4.0.3
+        module load intel-mkl/2017.4.239
         module load spral/master-gnu-6.4.0
 
         export STARPU_PREFETCH=1
