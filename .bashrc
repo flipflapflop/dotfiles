@@ -90,7 +90,7 @@ case $HOSTNAME in
         module use --append /numerical/flopez/modulefiles
         # load default modules
         module load gnu/comp/default
-        module load hwloc/1.11.2
+        module load hwloc/1.11.11
         module load fxt/0.3.1
         module load openmpi/1.10.2
         module load gnu/mkl/seq/11.2.0
@@ -99,7 +99,7 @@ case $HOSTNAME in
         module load parsec/master-trace
         module load hsl/latest
         # module load spral/trunk
-        module load spral/master
+        module load spral/master-gnu-5.5.0
         export STARPU_FXT_PREFIX=/home/flopez/traces/tmp/
         ;;
 
