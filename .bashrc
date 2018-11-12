@@ -198,7 +198,7 @@ case $HOSTNAME in
         module load GCC/6.4.0-2.28
         module load CMake
         module load hwloc/1.11.8
-        export HWLOC_DIR=$EBROOTHWLOC
+        export HWLOCDIR=$EBROOTHWLOC
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
         # GNU Libtool
