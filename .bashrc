@@ -196,11 +196,9 @@ case $HOSTNAME in
         export OMP_PROC_BIND=true
         export LD_LIBRARY_PATH=/home/f/flopez/pfs/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         module load GCC/6.4.0-2.28
-        module load GCCcore/6.4.0
-        module load binutils/2.28
-        module load CMake/3.9.1
+        module load CMake
         module load hwloc/1.11.8
-        module load gimkl/2017b
+        module load mkl/2017
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
         # GNU Libtool
@@ -208,7 +206,7 @@ case $HOSTNAME in
         # Own module files
         module use /home/f/flopez/modulefiles
         module load metis/4.0.3
-        module load scotch/6.0.4
+        # module load scotch/6.0.4
         module load starpu/master
         module load spral/master-gnu-6.4.0
         ;;
