@@ -198,13 +198,13 @@ case $HOSTNAME in
         module load GCC/6.4.0-2.28
         module load CMake
         module load hwloc/1.11.8
-        module load mkl/2017
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
         # GNU Libtool
         export PATH=/home/f/flopez/builds/libtool/2.4.6:$PATH
         # Own module files
         module use /home/f/flopez/modulefiles
+        module load mkl/2017
         module load metis/4.0.3
         # module load scotch/6.0.4
         module load starpu/master
