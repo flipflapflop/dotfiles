@@ -216,7 +216,7 @@ case $HOSTNAME in
         module load hwloc/1.11.11
         module load fxt/0.3.7
         module load starpu/master
-        module load spral/master-gcc-7.2.0
+        module load spral/master-gnu-7.3.0
         module load mkl/2018.1.163
         module load metis/4.0.3
         ;;
