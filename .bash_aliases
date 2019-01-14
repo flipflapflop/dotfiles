@@ -18,5 +18,3 @@ alias s='git status'
 # Search history by pressing up (backward) and down (forward) arrow
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-
-alias getmp3="youtube-dl -x --audio-format mp3 "
