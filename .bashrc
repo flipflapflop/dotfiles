@@ -236,12 +236,12 @@ case $HOSTNAME in
         module load fxt/0.3.7
         module load hwloc/1.11.10
         module load starpu/master-gpu
+        export STARPU_PREFETCH=1
+        export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
         module load intel-mkl/2017.4.239
         module load spral/master-gnu-6.4.0
-
-        export STARPU_PREFETCH=1
-        export STARPU_MALLOC_PINNED=0
+        module load cutlass/master
         ;;
 esac
 
