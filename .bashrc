@@ -223,11 +223,11 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
-        module load cmake
+        module load cmake/3.12.3
         module use --append $HOME/privatemodules
-        module load gcc/6.4.0
-        # Load default CUDA version
-        module load cuda
+        module load gcc/7.1.0
+        # Load CUDA 10
+        module load cuda/10.0.130
         export CUDA_HOME=$CUDADIR
         # export OMP_PLACES=cores
         export OMP_PLACES="{0:20},{10:20}"
@@ -240,7 +240,7 @@ case $HOSTNAME in
         export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
         module load intel-mkl/2017.4.239
-        module load spral/master-gnu-6.4.0
+        module load spral/master-gnu-7.1.0
         module load cutlass/master
         ;;
 esac
