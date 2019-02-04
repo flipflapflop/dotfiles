@@ -240,7 +240,7 @@ case $HOSTNAME in
         export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
         module load intel-mkl/2017.4.239
-        module load spral/master-gnu-7.1.0
+        module load spral/master-gcc-7.1.0-gpu
         module load cutlass/master
         ;;
 esac
