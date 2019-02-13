@@ -225,7 +225,6 @@ case $HOSTNAME in
         module purge # clean loaded modules
         module load cmake/3.12.3
         module use --append $HOME/privatemodules
-        module load gcc/7.1.0
         # Load CUDA 10
         module load cuda/10.0.130
         export CUDA_HOME=$CUDADIR
@@ -242,6 +241,7 @@ case $HOSTNAME in
         module load intel-mkl/2017.4.239
         module load spral/master-gcc-7.1.0-gpu
         module load cutlass/master
+        module load gcc/7.1.0
         ;;
 esac
 
