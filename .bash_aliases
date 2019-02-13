@@ -16,5 +16,5 @@ alias modulepath='echo -e ${MODULEPATH//:/\\n}'
 alias s='git status'
 
 # Search history by pressing up (backward) and down (forward) arrow
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+#bind '"\e[A": history-search-backward'
+#bind '"\e[B": history-search-forward'
