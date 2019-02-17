@@ -195,9 +195,11 @@ case $HOSTNAME in
         export OMP_CANCELLATION=true
         export OMP_PROC_BIND=true
         export LD_LIBRARY_PATH=/home/f/flopez/pfs/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
-        module load GCC/8.2.0-2.31.1
+        module load GCC/7.3.0-2.30
+        # module load GCC/8.2.0-2.31.1
         module load CMake
-        module load hwloc/1.11.11
+        module load hwloc/1.11.10
+        module load CUDA
         export HWLOCDIR=$EBROOTHWLOC
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
