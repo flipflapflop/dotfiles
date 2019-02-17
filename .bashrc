@@ -211,7 +211,7 @@ case $HOSTNAME in
         module load metis/4.0.3
         # module load scotch/6.0.4
         module load starpu/master-gpu-openmp
-        module load spral/master-gnu-6.4.0
+        module load spral/gpufix-gcc-7.3.0-gpu-openmp
         ;;
 
     saint-exupery)
