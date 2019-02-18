@@ -245,6 +245,10 @@ case $HOSTNAME in
         module load spral/master-gcc-7.1.0-gpu
         module load cutlass/master
         ;;
+    pge*)
+        module use.paragon
+        export autom4te_perllibdir=/gpfs/paragon/local/apps/gcc/utilities/share/autoconf
+        module load gcc7        
 esac
 
 #-------------------------------------------------------------
