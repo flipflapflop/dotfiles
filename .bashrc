@@ -247,8 +247,14 @@ case $HOSTNAME in
         ;;
     pge*)
         module use.paragon
+        export ACLOCAL_PATH=/usr/share/aclocal/
         export autom4te_perllibdir=/gpfs/paragon/local/apps/gcc/utilities/share/autoconf
-        module load gcc7        
+        module load gcc6
+        module load cuda/9.2
+        module load xlf
+        module load ibmessl/5.4
+        export LBLAS="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
+        export LLAPACK="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
 esac
 
 #-------------------------------------------------------------
