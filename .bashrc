@@ -250,7 +250,7 @@ case $HOSTNAME in
         export ACLOCAL_PATH=/usr/share/aclocal/
         export autom4te_perllibdir=/gpfs/paragon/local/apps/gcc/utilities/share/autoconf
         export OMP_PLACES=cores
-        export LD_LIBRARY_PATH=/gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/src/.libs/:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         module load gcc6
         module load cuda/9.2
         module load xlf
