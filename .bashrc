@@ -257,6 +257,7 @@ case $HOSTNAME in
         module load ibmessl/5.4
         export LBLAS="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
         export LLAPACK="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
+        module load hwloc/1.11.12
 esac
 
 #-------------------------------------------------------------
