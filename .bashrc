@@ -195,9 +195,11 @@ case $HOSTNAME in
         export OMP_CANCELLATION=true
         export OMP_PROC_BIND=true
         export LD_LIBRARY_PATH=/home/f/flopez/pfs/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
-        module load GCC/6.4.0-2.28
+        module load GCC/7.3.0-2.30
+        # module load GCC/8.2.0-2.31.1
         module load CMake
-        module load hwloc/1.11.8
+        module load hwloc/1.11.10
+        module load CUDA
         export HWLOCDIR=$EBROOTHWLOC
         export HSLDIR=/home/f/flopez/hsl2013
         export HSLPACKDIR=/home/f/flopez/hsl2013/packages
@@ -208,8 +210,8 @@ case $HOSTNAME in
         module load mkl/2017
         module load metis/4.0.3
         # module load scotch/6.0.4
-        module load starpu/master
-        module load spral/master-gnu-6.4.0
+        module load starpu/master-gpu-openmp
+        module load spral/gpufix-gcc-7.3.0-gpu-openmp
         ;;
 
     saint-exupery)
@@ -244,6 +246,21 @@ case $HOSTNAME in
         module load spral/gpufix-gcc-7.1.0-gpu-openmp
         module load cutlass/master
         module load gcc/7.1.0
+        ;;
+    pge*|hcplogin2)
+        module load use.paragon
+        export ACLOCAL_PATH=/usr/share/aclocal/
+        export autom4te_perllibdir=/gpfs/paragon/local/apps/gcc/utilities/share/autoconf
+        export OMP_PLACES=cores
+        export LD_LIBRARY_PATH=/gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
+        module load gcc6
+        module load cuda/9.2
+        module load xlf
+        module load ibmessl/5.4
+        export LBLAS="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
+        export LLAPACK="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
+        module use /gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/privatemodules
+        module load hwloc/1.11.12
         ;;
 esac
 
@@ -291,3 +308,20 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
+# added by Anaconda2 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/flopez/anaconda2/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/flopez/anaconda2/etc/profile.d/conda.sh" ]; then
+        . "/home/flopez/anaconda2/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/flopez/anaconda2/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+conda deactivate
