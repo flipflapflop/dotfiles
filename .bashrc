@@ -234,12 +234,14 @@ case $HOSTNAME in
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
         module load hwloc/1.11.10
-        module load starpu/master-gpu
+        # module load starpu/master-gpu
+        module load starpu/master-gpu-openmp
         export STARPU_PREFETCH=1
         export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
         module load intel-mkl/2017.4.239
-        module load spral/master-gcc-7.1.0-gpu
+        # module load spral/master-gcc-7.1.0-gpu
+        module load spral/gpufix-gcc-7.1.0-gpu-openmp
         module load cutlass/master
         module load gcc/7.1.0
         ;;
