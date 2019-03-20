@@ -198,7 +198,7 @@ case $HOSTNAME in
         module load GCC/7.3.0-2.30
         # module load GCC/8.2.0-2.31.1
         module load CMake
-        module load hwloc/1.11.10
+        module load hwloc/1.11.10-gpu
         module load CUDA
         export HWLOCDIR=$EBROOTHWLOC
         export HSLDIR=/home/f/flopez/hsl2013
