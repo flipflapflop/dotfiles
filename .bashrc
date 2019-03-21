@@ -235,7 +235,7 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
-        module load hwloc/1.11.10
+        module load hwloc/1.11.10-gpu
         # module load starpu/master-gpu
         module load starpu/master-gpu-openmp
         export STARPU_PREFETCH=1
