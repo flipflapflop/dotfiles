@@ -225,7 +225,7 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
-        module load cmake/3.12.3
+        module load cmake/3.14.0
         module use --append $HOME/privatemodules
         # Load CUDA 10
         module load cuda/10.0.130
