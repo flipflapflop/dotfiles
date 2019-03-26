@@ -245,7 +245,7 @@ case $HOSTNAME in
         # module load spral/master-gcc-7.1.0-gpu
         module load spral/gpufix-gcc-7.1.0-gpu-openmp
         module load cutlass/master
-        module load gcc/7.1.0
+        module load gcc/7.3.0
         ;;
     pge*|hcplogin2)
         module load use.paragon
