@@ -259,6 +259,7 @@ case $HOSTNAME in
         export LLAPACK="-L${ESSL_LIB} -lessl -lxlf90_r -lxlfmath -lxl"
         module use /gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/privatemodules
         module load hwloc/1.11.12
+        module load spral/gpufix
         ;;
 esac
 
