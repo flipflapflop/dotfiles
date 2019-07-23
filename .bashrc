@@ -261,6 +261,7 @@ case $HOSTNAME in
         module use /gpfs/paragon/local/HCRI016/dre03/fxl09-dre03/privatemodules
         module load hwloc/1.11.12
         module load spral/gpufix
+        module load cmake/3.10.2
         ;;
 esac
 
