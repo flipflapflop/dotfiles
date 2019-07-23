@@ -198,7 +198,7 @@ case $HOSTNAME in
         module load GCC/7.3.0-2.30
         # module load GCC/8.2.0-2.31.1
         module load CMake
-        module load hwloc/1.11.10
+        module load hwloc/1.11.10-gpu
         module load CUDA
         export HWLOCDIR=$EBROOTHWLOC
         export HSLDIR=/home/f/flopez/hsl2013
@@ -225,9 +225,8 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
-        module load cmake/3.12.3
+        module load cmake/3.14.0
         module use --append $HOME/privatemodules
-        module load gcc/7.1.0
         # Load CUDA 10
         module load cuda/10.0.130
         export CUDA_HOME=$CUDADIR
@@ -236,14 +235,16 @@ case $HOSTNAME in
         export LD_LIBRARY_PATH=/home/flopez/gtg-0.2-2/src/.libs/:$LD_LIBRARY_PATH
         export OMP_NUM_THREADS=20
         module load fxt/0.3.7
-        module load hwloc/1.11.10
-        module load starpu/master-gpu
+        module load hwloc/1.11.10-gpu
+        # module load starpu/master-gpu
+        module load starpu/master-gpu-openmp
         export STARPU_PREFETCH=1
         export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
         module load intel-mkl/2017.4.239
-        module load spral/master-gcc-7.1.0-gpu
+        module load spral/gpufix-gcc-7.3.0-gpu-openmp
         module load cutlass/master
+        module load gcc/7.3.0
         ;;
     pge*|hcplogin2)
         module load use.paragon
