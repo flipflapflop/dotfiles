@@ -73,7 +73,8 @@ export OMP_PROC_BIND=true
 #-------------------------------------------------------------
 
 case $HOSTNAME in
-    johnconnor)
+    johnconnor | evans)
+        source /usr/share/modules/init/bash
         source /usr/share/modules/init/bash
         ;;
     saint-exupery)
@@ -310,20 +311,20 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
-# added by Anaconda2 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/flopez/anaconda2/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/flopez/anaconda2/etc/profile.d/conda.sh" ]; then
-        . "/home/flopez/anaconda2/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/flopez/anaconda2/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-conda deactivate
+# # added by Anaconda2 2018.12 installer
+# # >>> conda init >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/flopez/anaconda2/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     \eval "$__conda_setup"
+# else
+#     if [ -f "/home/flopez/anaconda2/etc/profile.d/conda.sh" ]; then
+#         . "/home/flopez/anaconda2/etc/profile.d/conda.sh"
+#         CONDA_CHANGEPS1=false conda activate base
+#     else
+#         \export PATH="/home/flopez/anaconda2/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda init <<<
+# conda deactivate
