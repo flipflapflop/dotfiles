@@ -265,6 +265,9 @@ case $HOSTNAME in
         module load spral/gpufix
         module load cmake/3.10.2
         ;;
+    evans)
+        module load mkl/2019.2.187
+        ;;
 esac
 
 #-------------------------------------------------------------
