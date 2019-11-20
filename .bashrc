@@ -228,7 +228,8 @@ case $HOSTNAME in
         module load cmake/3.14.0
         module use --append $HOME/privatemodules
         # Load CUDA 10
-        module load cuda/10.0.130
+        #module load cuda/10.0.130
+        module load cuda/10.1/gcc-7.3.0-l7ex
         export CUDA_HOME=$CUDADIR
         # export OMP_PLACES=cores
         export OMP_PLACES="{0:20},{10:20}"
