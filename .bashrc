@@ -73,7 +73,8 @@ export OMP_PROC_BIND=true
 #-------------------------------------------------------------
 
 case $HOSTNAME in
-    johnconnor)
+    johnconnor | evans)
+        source /usr/share/modules/init/bash
         source /usr/share/modules/init/bash
         ;;
     saint-exupery)
