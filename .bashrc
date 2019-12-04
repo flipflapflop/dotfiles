@@ -267,6 +267,7 @@ case $HOSTNAME in
         ;;
     evans)
         module load mkl/2019.2.187
+        module load magma/2.5.2
         ;;
 esac
 
