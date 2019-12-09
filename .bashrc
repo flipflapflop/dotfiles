@@ -279,7 +279,7 @@ case $HOSTNAME in
         module load gcc/8.3.0
         module load cuda/10.1.243
         module load hwloc/1.11.11
-        module load openmpi
+        module load openmpi/4.0.1/gcc-7.2.0-zxs6
         module load intel-mkl
         module load cmake/3.16.0
         ;;
