@@ -273,8 +273,15 @@ case $HOSTNAME in
         ;;
     leconte.icl.utk.edu)
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
+        module load autoconf/2.69
+        module load automake/1.16.1
+        module load python/3.6.5
         module load gcc/8.3.0
         module load cuda/10.1.243
+        module load hwloc/1.11.11
+        module load openmpi
+        module load intel-mkl
+        module load cmake/3.16.0
         ;;
 esac
 
