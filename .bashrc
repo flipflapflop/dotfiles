@@ -271,6 +271,11 @@ case $HOSTNAME in
         module load mkl/2019.2.187
         module load magma/2.5.2
         ;;
+    leconte.icl.utk.edu)
+        export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
+        module load gcc/8.3.0
+        module load cuda/10.1.243
+        ;;
 esac
 
 #-------------------------------------------------------------
