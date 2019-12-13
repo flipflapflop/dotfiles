@@ -283,6 +283,7 @@ case $HOSTNAME in
         module load intel-mkl
         module load cmake/3.16.0
         module load magma/2.5.2
+        module load llvm/5.0.0
         ;;
 esac
 
