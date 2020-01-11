@@ -270,6 +270,7 @@ case $HOSTNAME in
     evans)
         module load mkl/2019.2.187
         module load magma/2.5.2
+        module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
         ;;
     leconte.icl.utk.edu)
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
