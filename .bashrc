@@ -268,7 +268,7 @@ case $HOSTNAME in
         module load cmake/3.10.2
         ;;
     evans)
-        module load mkl/2019.2.187
+        module load mkl/2020.0.166
         module load magma/2.5.2
         module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
         module load parsec/master
