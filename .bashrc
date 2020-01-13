@@ -243,7 +243,8 @@ case $HOSTNAME in
         export STARPU_PREFETCH=1
         export STARPU_MALLOC_PINNED=0
         module load metis/4.0.3
-        module load intel-mkl/2017.4.239
+        # module load intel-mkl/2017.4.239
+        module load intel-mkl/2019.3.199/gcc-7.3.0-2pn4
         module load spral/gpufix-gcc-7.3.0-gpu-openmp
         module load cutlass/master
         module load gcc/7.3.0
