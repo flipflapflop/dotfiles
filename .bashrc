@@ -272,7 +272,7 @@ case $HOSTNAME in
         module load mkl/2020.0.166
         module load magma/2.5.2
         module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
-        module load parsec/master
+        module load parsec-dtd-interface/topic-collective
         module load starpu/1.3.3
         ;;
     leconte.icl.utk.edu)
