@@ -273,6 +273,7 @@ case $HOSTNAME in
         module load magma/2.5.2
         module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
         module load parsec/master
+        module load starpu/1.3.3
         ;;
     leconte.icl.utk.edu)
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
