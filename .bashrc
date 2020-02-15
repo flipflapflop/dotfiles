@@ -282,7 +282,8 @@ case $HOSTNAME in
         module load python/3.6.5
         module load gcc/8.3.0
         module load cuda/10.1.243
-        module load hwloc/1.11.11
+        # module load hwloc/1.11.11
+        module load hwloc/1.11.13
         module load mpich/3.3beta2
         module load intel-mkl
         module load cmake/3.16.0
