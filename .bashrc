@@ -276,6 +276,7 @@ case $HOSTNAME in
         module load starpu/1.3.3
         ;;
     leconte.icl.utk.edu)
+        export ACLOCAL_PATH=$ACLOCAL_PATH:/usr/share/aclocal
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
         module load autoconf/2.69
         module load automake/1.16.1
@@ -289,6 +290,7 @@ case $HOSTNAME in
         module load cmake/3.16.0
         module load magma/2.5.2
         module load llvm/5.0.0
+        module load starpu/1.3.3
         ;;
 esac
 
