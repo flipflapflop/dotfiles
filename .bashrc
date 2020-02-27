@@ -292,6 +292,9 @@ case $HOSTNAME in
         module load llvm/5.0.0
         module load starpu/1.3.3
         ;;
+    tellico*)
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le
+        module load gcc-8.3.0-gcc-4.8.5-5ysgyus
 esac
 
 #-------------------------------------------------------------
