@@ -294,7 +294,13 @@ case $HOSTNAME in
         ;;
     tellico*)
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le
+        module load autoconf-2.69-gcc-4.8.5-f7tcytr
+        module load automake-1.16.1-gcc-4.8.5-fxylpre
         module load gcc-8.3.0-gcc-4.8.5-5ysgyus
+        module load libxml2-2.9.9-gcc-4.8.5-mhwz6pq
+        module load libpciaccess-0.13.5-gcc-4.8.5-lencfon
+        module load hwloc-1.11.13-gcc-4.8.5-ebioepl
+        module load starpu/1.3.3-omp
 esac
 
 #-------------------------------------------------------------
