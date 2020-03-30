@@ -275,9 +275,12 @@ case $HOSTNAME in
         module load parsec-dtd-interface/topic-collective
         module load starpu/1.3.3
         ;;
+    
     leconte.icl.utk.edu)
         export ACLOCAL_PATH=$ACLOCAL_PATH:/usr/share/aclocal
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
+        # Private spack modules
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-broadwell/
         module load autoconf/2.69
         module load automake/1.16.1
         module load python/3.6.5
@@ -291,7 +294,9 @@ case $HOSTNAME in
         module load magma/2.5.2
         module load llvm/5.0.0
         module load starpu/1.3.3
+        module load htop-2.2.0-gcc-8.3.0-x24ibrn
         ;;
+
     tellico*)
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le
         module load autoconf-2.69-gcc-4.8.5-f7tcytr
