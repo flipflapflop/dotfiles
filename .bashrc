@@ -251,6 +251,7 @@ case $HOSTNAME in
         module load magma/2.5.2
         module load cudnn/10.0
         module load mpi/openmpi/4.0.0
+        module load parsec/master
         ;;
     pge*|hcplogin2)
         module load use.paragon
