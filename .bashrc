@@ -253,6 +253,7 @@ case $HOSTNAME in
         module load mpi/openmpi/4.0.0
         module load parsec/master
         ;;
+
     pge*|hcplogin2)
         module load use.paragon
         export ACLOCAL_PATH=/usr/share/aclocal/
@@ -270,7 +271,9 @@ case $HOSTNAME in
         module load spral/gpufix
         module load cmake/3.10.2
         ;;
+
     evans)
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-ubuntu19.10-skylake
         module load mkl/2020.0.166
         module load magma/2.5.2
         module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
