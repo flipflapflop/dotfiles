@@ -302,6 +302,7 @@ case $HOSTNAME in
         module load llvm/5.0.0
         module load starpu/1.3.3
         module load htop-2.2.0-gcc-8.3.0-x24ibrn
+        module load openmpi/4.0.1/gcc-7.2.0-ttye
         ;;
 
     tellico*)
