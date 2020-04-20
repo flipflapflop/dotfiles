@@ -295,14 +295,13 @@ case $HOSTNAME in
         module load cuda/10.1.243
         # module load hwloc/1.11.11
         module load hwloc/1.11.13
-        module load mpich/3.3beta2
         module load intel-mkl
         module load cmake/3.16.0
         module load magma/2.5.2
         module load llvm/5.0.0
         module load starpu/1.3.3
         module load htop-2.2.0-gcc-8.3.0-x24ibrn
-        module load openmpi/4.0.1/gcc-7.2.0-ttye
+        module load openmpi-4.0.2-gcc-8.3.0-acy2ecp
         ;;
 
     tellico*)
