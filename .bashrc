@@ -274,11 +274,13 @@ case $HOSTNAME in
 
     evans)
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-ubuntu19.10-skylake
+        module load cmake-3.17.0-gcc-9.2.1-yheryxd
         module load mkl/2020.0.166
-        module load magma/2.5.2
-        module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
-        module load parsec-dtd-interface/topic-collective
+        module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
+        module load openmpi-3.1.5-gcc-9.2.1-tqyrxmu
+        module load parsec/master
         module load starpu/1.3.3
+        module load magma/2.5.2
         ;;
     
     leconte.icl.utk.edu)
