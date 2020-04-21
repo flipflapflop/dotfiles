@@ -252,7 +252,8 @@ case $HOSTNAME in
         module load cudnn/10.0
         # module load mpi/openmpi/4.0.0
         module load mpi/openmpi/3.0.0
-        module load parsec/master
+        # module load parsec/master
+        module load parsec/master-debug
         ;;
 
     pge*|hcplogin2)
@@ -278,7 +279,8 @@ case $HOSTNAME in
         module load cmake-3.17.0-gcc-9.2.1-yheryxd
         module load mkl/2020.0.166
         module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
-        module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
+        # module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
+        module load openmpi-3.1.5-gcc-9.2.1-tqyrxmu
         module load parsec/master
         module load starpu/1.3.3
         module load magma/2.5.2
