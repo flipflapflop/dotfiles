@@ -226,7 +226,7 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
-        module load cmake/3.14.0
+        module load cmake/3.16.2
         module use --append $HOME/privatemodules
         # Load CUDA 10
         #module load cuda/10.0.130
@@ -250,7 +250,12 @@ case $HOSTNAME in
         module load gcc/7.3.0
         module load magma/2.5.2
         module load cudnn/10.0
+        # module load mpi/openmpi/4.0.0
+        module load mpi/openmpi/3.0.0
+        # module load parsec/master
+        module load parsec/master-debug
         ;;
+
     pge*|hcplogin2)
         module load use.paragon
         export ACLOCAL_PATH=/usr/share/aclocal/
@@ -268,16 +273,24 @@ case $HOSTNAME in
         module load spral/gpufix
         module load cmake/3.10.2
         ;;
+
     evans)
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-ubuntu19.10-skylake
+        module load cmake-3.17.0-gcc-9.2.1-yheryxd
         module load mkl/2020.0.166
-        module load magma/2.5.2
-        module load openmpi/4.0.2/gcc-9.2.1_cuda-10.1
-        module load parsec-dtd-interface/topic-collective
+        module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
+        # module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
+        module load openmpi-3.1.5-gcc-9.2.1-tqyrxmu
+        module load parsec/master-debug
         module load starpu/1.3.3
+        module load magma/2.5.2
         ;;
+    
     leconte.icl.utk.edu)
         export ACLOCAL_PATH=$ACLOCAL_PATH:/usr/share/aclocal
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
+        # Private spack modules
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-broadwell/
         module load autoconf/2.69
         module load automake/1.16.1
         module load python/3.6.5
@@ -285,13 +298,15 @@ case $HOSTNAME in
         module load cuda/10.1.243
         # module load hwloc/1.11.11
         module load hwloc/1.11.13
-        module load mpich/3.3beta2
         module load intel-mkl
         module load cmake/3.16.0
         module load magma/2.5.2
         module load llvm/5.0.0
         module load starpu/1.3.3
+        module load htop-2.2.0-gcc-8.3.0-x24ibrn
+        module load openmpi-4.0.2-gcc-8.3.0-acy2ecp
         ;;
+
     tellico*)
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power9le
