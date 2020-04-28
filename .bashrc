@@ -291,20 +291,24 @@ case $HOSTNAME in
         export MODULEPATH=$MODULEPATH:/nfs/apps/spack/share/spack/modules/linux-centos7-broadwell
         # Private spack modules
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-broadwell/
-        module load autoconf/2.69
-        module load automake/1.16.1
-        module load python/3.6.5
-        module load gcc/8.3.0
-        module load cuda/10.1.243
-        # module load hwloc/1.11.11
-        module load hwloc/1.11.13
-        module load intel-mkl
-        module load cmake/3.16.0
-        module load magma/2.5.2
-        module load llvm/5.0.0
-        module load starpu/1.3.3
-        module load htop-2.2.0-gcc-8.3.0-x24ibrn
-        module load openmpi-4.0.2-gcc-8.3.0-acy2ecp
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-haswell/
+        module load autoconf-2.69-gcc-4.8.5-gl2uqxy
+        module load automake-1.16.2-gcc-4.8.5-f4d6ia2
+        module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
+        module load gcc-8.4.0-gcc-4.8.5-uzcltsa
+
+        # module load python/3.6.5
+        # module load gcc/8.3.0
+        # module load cuda/10.1.243
+        # # module load hwloc/1.11.11
+        # module load hwloc/1.11.13
+        # module load intel-mkl
+        # module load cmake/3.16.0
+        # module load magma/2.5.2
+        # module load llvm/5.0.0
+        # module load starpu/1.3.3
+        # module load htop-2.2.0-gcc-8.3.0-x24ibrn
+        # module load openmpi-4.0.2-gcc-8.3.0-acy2ecp
         ;;
 
     tellico*)
