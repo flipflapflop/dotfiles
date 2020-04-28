@@ -308,18 +308,6 @@ case $HOSTNAME in
         ;;
 
     tellico*)
-        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le
-        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power9le
-        module load autoconf-2.69-gcc-4.8.5-f7tcytr
-        module load automake-1.16.1-gcc-4.8.5-fxylpre
-        module load gcc-8.3.0-gcc-4.8.5-5ysgyus
-        module load libxml2-2.9.9-gcc-4.8.5-mhwz6pq
-        module load libpciaccess-0.13.5-gcc-4.8.5-lencfon
-        module load hwloc-1.11.13-gcc-4.8.5-ebioepl
-        module load cmake-3.16.2-gcc-8.3.0-jzr7tis
-        module load cuda-10.2.89-gcc-8.3.0-aeghkl3
-        module load starpu/1.3.3-omp
-        module load  htop-2.2.0-gcc-8.3.0-ipu4hm6
         export ACLOCAL_PATH=/usr/share/aclocal/:$ACLOCAL_PATH
 esac
 
