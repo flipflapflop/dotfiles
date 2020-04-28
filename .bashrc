@@ -309,6 +309,12 @@ case $HOSTNAME in
 
     tellico*)
         export ACLOCAL_PATH=/usr/share/aclocal/:$ACLOCAL_PATH
+        export MODULEPATH=$MODULEPATH:/apps/spack/share/spack/modules/linux-rhel7-power8le/
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le/
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power9le/
+        module load gcc-8.3.0-gcc-4.8.5-v6brhfy
+        module load cuda-10.2.89-gcc-8.3.0-wcda5zk
+        module load hwloc-1.11.11-gcc-8.3.0-usy4vl5 
 esac
 
 #-------------------------------------------------------------
