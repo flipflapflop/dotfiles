@@ -316,11 +316,15 @@ case $HOSTNAME in
         export MODULEPATH=$MODULEPATH:/apps/spack/share/spack/modules/linux-rhel7-power8le/
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power8le/
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-rhel7-power9le/
-        module load gcc-8.3.0-gcc-4.8.5-v6brhfy
-        module load cuda-10.2.89-gcc-8.3.0-wcda5zk
+        # module load gcc-8.3.0-gcc-4.8.5-v6brhfy
+        module load gcc-7.4.0-gcc-8.3.0-obdb6j6
+        # module load cuda-10.2.89-gcc-8.3.0-wcda5zk
+        module load cuda/local
         module load libpciaccess-0.13.5-gcc-8.3.0-2jgej6i
         module load libxml2-2.9.9-gcc-8.3.0-hoz6ovf
-        module load hwloc-1.11.11-gcc-8.3.0-usy4vl5 
+        # module load hwloc-1.11.11-gcc-8.3.0-usy4vl5
+        module load hwloc/1.11.13
+        module load starpu/1.3.3-omp
 esac
 
 #-------------------------------------------------------------
