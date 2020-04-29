@@ -325,6 +325,7 @@ case $HOSTNAME in
         # module load hwloc-1.11.11-gcc-8.3.0-usy4vl5
         module load hwloc/1.11.13
         module load starpu/1.3.3-omp
+        module load cmake-3.17.1-gcc-8.3.0-7cbwbeh
 esac
 
 #-------------------------------------------------------------
