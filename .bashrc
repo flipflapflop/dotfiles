@@ -250,9 +250,9 @@ case $HOSTNAME in
         module load gcc/7.3.0
         module load magma/2.5.2
         module load cudnn/10.0
-        # module load mpi/openmpi/4.0.0
-        module load mpi/openmpi/3.0.0
-        module load parsec/master
+        module load mpi/openmpi/4.0.0
+        # module load mpi/openmpi/3.0.0
+        module load parsec/master-debug
         ;;
 
     pge*|hcplogin2)
