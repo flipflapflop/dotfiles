@@ -226,6 +226,7 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-scientific7-nehalem/    
         module load cmake/3.16.2
         module use --append $HOME/privatemodules
         # Load CUDA 10
@@ -250,7 +251,7 @@ case $HOSTNAME in
         module load gcc/7.3.0
         module load magma/2.5.2
         module load cudnn/10.0
-        module load mpi/openmpi/4.0.0
+        module load mpi/openmpi/3.0.0
         module load parsec/master-debug
         ;;
 
