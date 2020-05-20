@@ -294,7 +294,8 @@ case $HOSTNAME in
         module load automake-1.16.2-gcc-4.8.5-f4d6ia2
         module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
         module load gcc-8.4.0-gcc-4.8.5-uzcltsa
-
+        module load intel-mkl/2020.0.166/gcc-7.2.0-6okn
+        
         # module load python/3.6.5
         # module load gcc/8.3.0
         # module load cuda/10.1.243
