@@ -298,6 +298,7 @@ case $HOSTNAME in
         module load intel-mkl/2020.0.166/gcc-7.2.0-6okn
         module load cuda/10.2.89/gcc-7.2.0-exlx
         module load magma/2.5.2
+        module load htop/2.2.0/gcc-7.2.0-gqld
         
         # module load python/3.6.5
         # module load gcc/8.3.0
