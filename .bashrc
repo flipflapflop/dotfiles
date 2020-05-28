@@ -226,6 +226,7 @@ case $HOSTNAME in
 
     *.alembert|saturn.icl.utk.edu)
         module purge # clean loaded modules
+        export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-scientific7-nehalem/    
         module load cmake/3.16.2
         module use --append $HOME/privatemodules
         # Load CUDA 10
@@ -250,9 +251,7 @@ case $HOSTNAME in
         module load gcc/7.3.0
         module load magma/2.5.2
         module load cudnn/10.0
-        # module load mpi/openmpi/4.0.0
         module load mpi/openmpi/3.0.0
-        # module load parsec/master
         module load parsec/master-debug
         ;;
 
@@ -279,8 +278,7 @@ case $HOSTNAME in
         module load cmake-3.17.0-gcc-9.2.1-yheryxd
         module load mkl/2020.0.166
         module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
-        # module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
-        module load openmpi-3.1.5-gcc-9.2.1-tqyrxmu
+        module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
         module load parsec/master-debug
         module load starpu/1.3.3
         module load magma/2.5.2
@@ -296,7 +294,13 @@ case $HOSTNAME in
         module load automake-1.16.2-gcc-4.8.5-f4d6ia2
         module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
         module load gcc-8.4.0-gcc-4.8.5-uzcltsa
-
+        module load cmake/3.16.2/gcc-7.2.0-aoyx
+        module load intel-mkl/2020.0.166/gcc-7.2.0-6okn
+        module load cuda/10.2.89/gcc-7.2.0-exlx
+        module load magma/2.5.2
+        module load htop/2.2.0/gcc-7.2.0-gqld
+        module load openmpi/4.0.2/gcc-8.4.0_cuda-10.2
+        
         # module load python/3.6.5
         # module load gcc/8.3.0
         # module load cuda/10.1.243
