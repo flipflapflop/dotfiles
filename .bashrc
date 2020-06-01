@@ -278,7 +278,7 @@ case $HOSTNAME in
         module load cmake-3.17.0-gcc-9.2.1-yheryxd
         module load mkl/2020.0.166
         module load libpciaccess-0.13.5-gcc-9.2.1-g6amv64
-        module load xz-5.2.5-gcc-9.2.1-vh77osg
+        # module load xz-5.2.5-gcc-9.2.1-vh77osg
         module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
         module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
         module load parsec/master-debug
