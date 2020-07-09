@@ -64,9 +64,9 @@ export FC=gfortran
 # OpenMP
 #-------------------------------------------------------------
 
-export OMP_NESTED=true
-export OMP_CANCELLATION=true
-export OMP_PROC_BIND=true
+# export OMP_NESTED=true
+# export OMP_CANCELLATION=true
+# export OMP_PROC_BIND=true
 
 #-------------------------------------------------------------
 # module
