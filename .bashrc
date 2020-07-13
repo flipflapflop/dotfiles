@@ -333,6 +333,13 @@ case $HOSTNAME in
         module load starpu/1.3.3-omp
         module load cmake-3.17.1-gcc-8.3.0-7cbwbeh
         module load htop-2.2.0-gcc-8.3.0-ipu4hm6
+        ;;
+
+    login*)
+        module load cmake/3.17.3
+        module load gcc/9.1.0
+        module load cuda/10.1.243
+        module load essl/6.1.0-2
 esac
 
 #-------------------------------------------------------------
