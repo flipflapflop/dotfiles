@@ -303,19 +303,11 @@ case $HOSTNAME in
         module load magma/2.5.2
         module load htop/2.2.0/gcc-7.2.0-gqld
         module load openmpi/4.0.2/gcc-8.4.0_cuda-10.2
+        module load libxml2/2.9.9/gcc-7.2.0-nq4w
+        module load libpciaccess/0.13.5/gcc-7.2.0-cnpq
+        module load hwloc/2.0.2/gcc-7.2.0-wllc
+        module load parsec-mermoz/master
         
-        # module load python/3.6.5
-        # module load gcc/8.3.0
-        # module load cuda/10.1.243
-        # # module load hwloc/1.11.11
-        # module load hwloc/1.11.13
-        # module load intel-mkl
-        # module load cmake/3.16.0
-        # module load magma/2.5.2
-        # module load llvm/5.0.0
-        # module load starpu/1.3.3
-        # module load htop-2.2.0-gcc-8.3.0-x24ibrn
-        # module load openmpi-4.0.2-gcc-8.3.0-acy2ecp
         ;;
 
     tellico*)
