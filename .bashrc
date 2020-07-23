@@ -307,7 +307,8 @@ case $HOSTNAME in
         module load libpciaccess/0.13.5/gcc-7.2.0-cnpq
         module load hwloc/2.0.2/gcc-7.2.0-wllc
         module load parsec-mermoz/master
-        
+
+        export OMP_PLACES=cores
         ;;
 
     tellico*)
