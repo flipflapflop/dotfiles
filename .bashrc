@@ -292,6 +292,7 @@ case $HOSTNAME in
         # Private spack modules
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-broadwell/
         export MODULEPATH=$MODULEPATH:/home/flopez/spack/share/spack/modules/linux-centos7-haswell/
+        export MODULEPATH=$MODULEPATH:/home/scayrols/Modules/modulefiles/
         module load autoconf-2.69-gcc-4.8.5-gl2uqxy
         module load automake-1.16.2-gcc-4.8.5-f4d6ia2
         module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
