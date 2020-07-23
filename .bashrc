@@ -339,8 +339,10 @@ case $HOSTNAME in
     login*)
         module load cmake/3.17.3
         module load gcc/9.1.0
+        module load netlib-lapack/3.8.0
         module load cuda/10.1.243
         module load essl/6.1.0-2
+        module load parsec-mermoz/master
 esac
 
 #-------------------------------------------------------------
