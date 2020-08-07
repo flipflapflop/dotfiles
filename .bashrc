@@ -307,6 +307,9 @@ case $HOSTNAME in
         module load libpciaccess/0.13.5/gcc-7.2.0-cnpq
         module load hwloc/2.0.2/gcc-7.2.0-wllc
         module load parsec-mermoz/master
+        
+        module load zlib-1.2.11-gcc-8.4.0-j4klyoy
+        module load opencv-4.2.0-gcc-8.4.0-2nahron
 
         export OMP_PLACES=cores
         ;;
