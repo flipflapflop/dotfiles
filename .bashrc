@@ -281,7 +281,7 @@ case $HOSTNAME in
         # module load xz-5.2.5-gcc-9.2.1-vh77osg
         module load hwloc-1.11.11-gcc-9.2.1-z4prrl2
         module load openmpi-4.0.3-gcc-9.2.1-3i4pipm
-        module load parsec/master-debug
+        module load parsec-mermoz/master-debug
         module load starpu/1.3.3
         module load magma/2.5.2
         ;;
