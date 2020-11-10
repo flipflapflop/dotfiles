@@ -284,6 +284,7 @@ case $HOSTNAME in
         module load parsec-mermoz/master-debug
         module load starpu/1.3.3
         module load magma/2.5.2
+        source /opt/intel/oneapi/setvars.sh
         ;;
     
     leconte.icl.utk.edu)
