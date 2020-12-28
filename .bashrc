@@ -297,12 +297,12 @@ case $HOSTNAME in
         module load autoconf-2.69-gcc-4.8.5-gl2uqxy
         module load automake-1.16.2-gcc-4.8.5-f4d6ia2
         module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
-        module load gcc-8.4.0-gcc-4.8.5-uzcltsa
-        module load cmake/3.16.2/gcc-7.2.0-aoyx
+        module load gcc-8.4.0-gcc-4.8.5-uzcltsa   
+        module load cmake-3.19.2-gcc-8.4.0-7gc5f6y
         module load intel-mkl-2020.4.304-gcc-8.4.0-knoj3qf
 	module load cuda/10.2.89/gcc-7.3.0-7y6z
         module load magma/2.5.2
-        module load htop/2.2.0/gcc-7.2.0-gqld
+        module load htop-2.2.0-gcc-8.4.0-cuv3mq6
         module load openmpi/4.0.2/gcc-8.4.0_cuda-10.2
         module load libxml2/2.9.9/gcc-7.2.0-nq4w
         module load libpciaccess/0.13.5/gcc-7.2.0-cnpq
