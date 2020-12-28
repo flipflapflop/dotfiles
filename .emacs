@@ -41,8 +41,8 @@
 ;; (with-library tool-bar-mode
 ;;               (tool-bar-mode -1))
 
-(if (> emacs-major-version 20)
-    (tool-bar-mode -1))
+;; (if (> emacs-major-version 20)
+;;     (tool-bar-mode -1))
 
 ;; Scroll line by line
 (setq scroll-step 1)
@@ -79,7 +79,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; put scrollbar on the right side and disable menu bar
-(set-scroll-bar-mode 'right) 
+;(set-scroll-bar-mode 'right) 
 ;; (scroll-bar-mode -1)
 (menu-bar-mode -1)
 

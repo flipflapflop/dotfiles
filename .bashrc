@@ -299,8 +299,8 @@ case $HOSTNAME in
         module load pkgconf-1.6.3-gcc-4.8.5-2qrpgpd
         module load gcc-8.4.0-gcc-4.8.5-uzcltsa
         module load cmake/3.16.2/gcc-7.2.0-aoyx
-        module load intel-mkl/2020.0.166/gcc-7.2.0-6okn
-        module load cuda/10.2.89/gcc-7.2.0-exlx
+        module load intel-mkl-2020.4.304-gcc-8.4.0-knoj3qf
+	module load cuda/10.2.89/gcc-7.3.0-7y6z
         module load magma/2.5.2
         module load htop/2.2.0/gcc-7.2.0-gqld
         module load openmpi/4.0.2/gcc-8.4.0_cuda-10.2
