@@ -1,4 +1,12 @@
 
+. ~/spack/share/spack/setup-env.sh
+
+. $(~/spack/bin/spack location -i lmod)/lmod/lmod/init/bash
+. ~/spack/share/spack/setup-env.sh
+
+module load htop-2.2.0-gcc-4.8.5-eaf4ym5
+module load gcc-11.2.0-gcc-4.8.5-yqde46k
+
 export EDITOR=emacs
 
 # svn editor
@@ -349,6 +357,12 @@ esac
 #-------------------------------------------------------------
 
 source $HOME/.bash_aliases
+
+
+# Run local bashrc
+if [ -f .bashrc.local ]; then
+    . .bashrc.local
+fi
 
 #-------------------------------------------------------------
 # Handy functions
