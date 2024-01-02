@@ -1,5 +1,36 @@
+if [ -f .bash_setup_env ]; then
+    . .bash_setup_env
+fi
 
-. ~/spack/share/spack/setup-env.sh
+#-------------------------------------------------------------
+# spack
+#-------------------------------------------------------------
+
+export SPACK_LOADED=0
+
+if [ -f ${SPACK_DIR}/share/spack/setup-env.sh ]; then
+    # SPACK_STATUS=0
+    . ${SPACK_DIR}/share/spack/setup-env.sh &> /dev/null
+    if command -v spack  &> /dev/null
+    then
+        spack help &> /dev/null
+        SPACK_SETUP_ENV_STATUS=$?
+
+        if [ $SPACK_SETUP_ENV_STATUS -eq 0 ]
+        then
+            export SPACK_LOADED=1
+        else
+            export SPACK_LOADED=0
+        fi
+    fi    
+    
+    if [ $SPACK_LOADED -eq 0 ]
+    then
+        echo "Error detected while loading Spack"
+    fi
+    
+fi
+#. ~/spack/share/spack/setup-env.sh
 
 #. $(~/spack/bin/spack location -i lmod)/lmod/lmod/init/bash
 #. ~/spack/share/spack/setup-env.sh
@@ -71,126 +102,12 @@ export FC=gfortran
 
 # export OMP_NESTED=true
 # export OMP_CANCELLATION=true
-# export OMP_PROC_BIND=true
-
-#-------------------------------------------------------------
-# module
-#-------------------------------------------------------------
-
-case $HOSTNAME in
-    johnconnor | evans)
-        source /usr/share/modules/init/bash
-        source /usr/share/modules/init/bash
-        ;;
-    saint-exupery)
-        source /usr/local/Modules/init/bash
-        ;;
-esac
+export OMP_PROC_BIND=true
 
 # add local modulefile directory
-module use --append $HOME/privatemodules
+#module use --append $HOME/privatemodules
 
 case $HOSTNAME in
-    gauss)
-        # add global modulefile directory
-        module use --append /numerical/flopez/modulefiles
-        # load default modules
-        module load gnu/comp/default
-        module load hwloc/1.11.11
-        module load fxt/0.3.1
-        module load openmpi/1.10.2
-        module load gnu/mkl/seq/11.2.0
-        module load metis/4.0.3
-        module load starpu/master-fxt
-        module load parsec/master-trace
-        module load hsl/latest
-        # module load spral/trunk
-        module load spral/master-gnu-5.5.0
-        export STARPU_FXT_PREFIX=/home/flopez/traces/tmp/
-        ;;
-
-    johnconnor)
-        module load hsl/latest
-        module load lapack/3.6.0
-        module load cuda/7.5
-        module load hwloc/1.11.6
-        module load metis/4.0.3
-        module load mpi/local
-        module load starpu/trunk-nogpu
-        module load parsec/trunk
-        module load spral/master
-        ;;
-
-    cn1g01.gpu.rl.ac.uk)
-        module load automake/1.14.1
-        module load autoconf/2.69
-        gcc/6.2.0
-        module load intel/mkl/11.3.1.150
-        module load cuda/9.1.85
-# CUDA settings
-        export CUDADIR=$CUDA_HOME
-        export CUDA_DIR=$CUDA_HOME
-        module load hwloc/gpu-1.11.4
-        module load starpu/trunk-gpu
-        module load magma/1.7.0
-        module load metis/4.0.3
-        module load hsl/latest
-        module load spral/master-gnu-5.3.0
-        module use --append /home/cseg/numanlys/modules
-# OMP setting
-        export OMP_PROC_BIND=true
-        ;;
-
-    cn202.scarf.rl.ac.uk | cn255.scarf.rl.ac.uk)
-        export OMP_CANCELLATION=true
-        export OMP_PROC_BIND=true
-        export ACLOCAL_PATH=/usr/share/aclocal
-        export LD_LIBRARY_PATH=/home/cseg/numanlys/sw/metis/lib-4.0.3:$LD_LIBRARY_PATH
-        export LD_LIBRARY_PATH=/home/cseg/numanlys/jhogg/src/gtg-0.2-2/src/.libs:$LD_LIBRARY_PATH
-        module load automake/1.14.1
-        module load autoconf/2.69
-        module load cmake/3.4.3
-        module load gcc/6.1.0
-        module load intel/mkl/11.3.1.150
-        export LBLAS="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
-        export LLAPACK="-L$MKL_LIBS -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm"
-        module load hwloc/1.11.6
-        # module load openmpi/1.10.2
-        module load starpu/1.2.3
-        module load parsec/master
-        module load metis/4.0.3
-        module load hsl/latest
-        module load spral/master-gnu-6.1.0
-        module use --append /home/cseg/numanlys/scarf523/modulefiles
-        module use --append /home/cseg/numanlys/modules
-        ;;
-    phobos.icl.utk.edu)
-        # Compiler
-        ## gnu
-        export CC=/opt/bin/gcc
-        export CXX=/opt/bin/g++
-        export FC=/opt/bin/gfortran
-        # Metis
-        export METISDIR=/home/flopez/metis-4.0.3
-        # HSL packages
-        export HSLPACKDIR=/home/flopez/hsl/packages
-        # Intel MKL
-        export MKLROOT=/opt/intel_mkl2017/mkl/
-        # Intel libraries
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64
-        # SPRAL
-        ## gnu
-        export SPRALDIR=/home/flopez/builds/spral/gnu
-        # Parsec
-        ## gnu
-        export PARSECSRCDIR=/home/flopez/parsec
-        export PARSECDIR=/home/flopez/builds/parsec/master/gnu/
-        export PARSECPP=$PARSECDIR/parsec/interfaces/ptg/ptg-compiler/parsec_ptgpp
-        # LD Library Path
-        export LD_LIBRARY_PATH=/lib64:$LD_LIBRARY_PATH
-        export LD_LIBRARY_PATH=/opt/lib64:$LD_LIBRARY_PATH
-        export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
-        ;;
 
     *.hpc2n.umu.se)
         export OMP_CANCELLATION=true
@@ -348,8 +265,8 @@ source $HOME/.bash_aliases
 
 
 # Run local bashrc
-if [ -f .bashrc.local ]; then
-    . .bashrc.local
+if [ -f .bash_local ]; then
+    . .bash_local
 fi
 
 #-------------------------------------------------------------
