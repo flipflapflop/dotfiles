@@ -87,7 +87,7 @@
 (cua-mode 1)
 
 ;; identify the machine
-(defvar gauss   (equal system-name "gauss"))
+;; (defvar gauss   (equal system-name "gauss"))
 
 ;; disable welcome message
 (setq inhibit-startup-message t)
@@ -102,7 +102,7 @@
 (add-to-list 'load-path "~/emacs-packages/cuda-mode")
 (add-to-list 'load-path "~/emacs-packages/jdf-mode")
 (add-to-list 'load-path "~/emacs-packages/graphviz-dot-mode")
-(add-to-list 'custom-theme-load-path "~/emacs-packages/emacs-color-theme-solarized")
+;; (add-to-list 'custom-theme-load-path "~/emacs-packages/emacs-color-theme-solarized")
 
 ;; Add Melpa package archive
 (require 'package)
@@ -196,58 +196,58 @@
 ;; FACES
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun faces_x ()
-  ;; these are used when in X
-  ;; 
-  (custom-set-faces
-   '(default ((t (:foreground "white" :background "black" :family "DejaVu Sans Mono"))))
-   '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
-   '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
-   '(font-lock-comment-face ((t (:italic t :foreground "#5F5A60"))))
-;   '(font-lock-comment-face ((t (:italic t :foreground "PaleGreen"))))
-   '(font-lock-string-face ((t (:foreground "LightSteelBlue"))))
-    '(font-lock-function-name-face ((t (:foreground "gold"))))
-   '(font-lock-keyword-face ((t (:foreground "springgreen"))))
-   '(font-lock-type-face ((t (:foreground "PaleGreen"))))
-   '(font-lock-warning-face ((t (:foreground "Red"))))
-   '(font-lock-variable-name-face ((t (:foreground "Coral"))))
-   '(region ((t (:background "white" :foreground "black"))))
-   '(menu ((((type x-toolkit)) (:background "light slate gray" :foreground "white" :box (:line-width 2 :color "grey75" :style released-button)))))
-   '(mode-line ((t (:foreground "black" :background "light slate gray"))))
-   '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "white" :box (:line-width 1 :style released-button))))))
-  (set-cursor-color "deep sky blue")
-  (set-foreground-color "white")
-  (set-background-color "black")
-  (set-face-foreground 'default "white")
-  (set-face-background 'default "black")
- )
+;; (defun faces_x ()
+;;   ;; these are used when in X
+;;   ;; 
+;;   (custom-set-faces
+;;    '(default ((t (:foreground "white" :background "black" :family "DejaVu Sans Mono"))))
+;;    '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
+;;    '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
+;;    '(font-lock-comment-face ((t (:italic t :foreground "#5F5A60"))))
+;; ;   '(font-lock-comment-face ((t (:italic t :foreground "PaleGreen"))))
+;;    '(font-lock-string-face ((t (:foreground "LightSteelBlue"))))
+;;     '(font-lock-function-name-face ((t (:foreground "gold"))))
+;;    '(font-lock-keyword-face ((t (:foreground "springgreen"))))
+;;    '(font-lock-type-face ((t (:foreground "PaleGreen"))))
+;;    '(font-lock-warning-face ((t (:foreground "Red"))))
+;;    '(font-lock-variable-name-face ((t (:foreground "Coral"))))
+;;    '(region ((t (:background "white" :foreground "black"))))
+;;    '(menu ((((type x-toolkit)) (:background "light slate gray" :foreground "white" :box (:line-width 2 :color "grey75" :style released-button)))))
+;;    '(mode-line ((t (:foreground "black" :background "light slate gray"))))
+;;    '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "white" :box (:line-width 1 :style released-button))))))
+;;   (set-cursor-color "deep sky blue")
+;;   (set-foreground-color "white")
+;;   (set-background-color "black")
+;;   (set-face-foreground 'default "white")
+;;   (set-face-background 'default "black")
+;;  )
 
 ;; :family "DejaVu Sans Mono"
 ;; :family "Courier 10 Pitch"
 
-(defun faces_nox ()
-  ;; these are used when in terminal
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom -- don't edit or cut/paste it!
-   ;; Your init file should contain only one such instance.
-   '(default ((t (:foreground "white" :background "black"))))
-   '(font-lock-comment-face ((t (:foreground "magenta"))))
-   '(font-lock-function-name-face ((t (:foreground "red"))))
-   '(font-lock-keyword-face ((t (:foreground "green"))))
-   '(font-lock-type-face ((t (:foreground "blue"))))
-   '(font-lock-string-face ((t (:foreground "cyan"))))
-   '(font-lock-variable-name-face ((t (:foreground "blue"))))
-   '(menu ((((type x-toolkit)) (:background "white" :foreground "black" :box (:line-width 2 :color "grey75" :style released-button)))))
-   '(modeline ((t (:foreground "blue" :background "white")))))
-  (set-cursor-color "blue")
-  (set-foreground-color "white")
-  (set-background-color "black")
-  (set-face-foreground 'default "white")
-  (set-face-background 'default "black")
-  )
+;; (defun faces_nox ()
+;;   ;; these are used when in terminal
+;;   (custom-set-faces
+;;    ;; custom-set-faces was added by Custom -- don't edit or cut/paste it!
+;;    ;; Your init file should contain only one such instance.
+;;    '(default ((t (:foreground "white" :background "black"))))
+;;    '(font-lock-comment-face ((t (:foreground "magenta"))))
+;;    '(font-lock-function-name-face ((t (:foreground "red"))))
+;;    '(font-lock-keyword-face ((t (:foreground "green"))))
+;;    '(font-lock-type-face ((t (:foreground "blue"))))
+;;    '(font-lock-string-face ((t (:foreground "cyan"))))
+;;    '(font-lock-variable-name-face ((t (:foreground "blue"))))
+;;    '(menu ((((type x-toolkit)) (:background "white" :foreground "black" :box (:line-width 2 :color "grey75" :style released-button)))))
+;;    '(modeline ((t (:foreground "blue" :background "white")))))
+;;   (set-cursor-color "blue")
+;;   (set-foreground-color "white")
+;;   (set-background-color "black")
+;;   (set-face-foreground 'default "white")
+;;   (set-face-background 'default "black")
+;;   )
 
 
-(faces_x)
+;; (faces_x)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
@@ -384,26 +384,26 @@
  ;; If there is more than one, they won't work right.
  '(load-home-init-file t t)
  '(package-selected-packages (quote (clang-format magit))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "white" :background "black" :family "DejaVu Sans Mono"))))
- '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
- '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
-; '(font-lock-comment-face ((t (:italic t :foreground "#5F5A60"))))
- '(font-lock-comment-face ((t (:italic t :foreground "light slate gray"))))
- '(font-lock-function-name-face ((t (:foreground "gold"))))
- '(font-lock-keyword-face ((t (:foreground "springgreen"))))
- '(font-lock-string-face ((t (:foreground "LightSteelBlue"))))
- '(font-lock-type-face ((t (:foreground "PaleGreen"))))
- '(font-lock-variable-name-face ((t (:foreground "Coral"))))
- '(font-lock-warning-face ((t (:foreground "Red"))))
- '(menu ((((type x-toolkit)) (:background "light slate gray" :foreground "white" :box (:line-width 2 :color "grey75" :style released-button)))))
- '(mode-line ((t (:foreground "black" :background "light slate gray"))))
- '(region ((t (:background "white" :foreground "black"))))
- '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "white" :box (:line-width 1 :style released-button))))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:foreground "white" :background "black" :family "DejaVu Sans Mono"))))
+;;  '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
+;;  '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
+;; ; '(font-lock-comment-face ((t (:italic t :foreground "#5F5A60"))))
+;;  '(font-lock-comment-face ((t (:italic t :foreground "light slate gray"))))
+;;  '(font-lock-function-name-face ((t (:foreground "gold"))))
+;;  '(font-lock-keyword-face ((t (:foreground "springgreen"))))
+;;  '(font-lock-string-face ((t (:foreground "LightSteelBlue"))))
+;;  '(font-lock-type-face ((t (:foreground "PaleGreen"))))
+;;  '(font-lock-variable-name-face ((t (:foreground "Coral"))))
+;;  '(font-lock-warning-face ((t (:foreground "Red"))))
+;;  '(menu ((((type x-toolkit)) (:background "light slate gray" :foreground "white" :box (:line-width 2 :color "grey75" :style released-button)))))
+;;  '(mode-line ((t (:foreground "black" :background "light slate gray"))))
+;;  '(region ((t (:background "white" :foreground "black"))))
+;;  '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "white" :box (:line-width 1 :style released-button))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; solarized theme
@@ -412,6 +412,12 @@
 ;; (load-theme 'solarized t)
 ;; (set-frame-parameter nil 'background-mode 'dark)
 ;; (enable-theme 'solarized)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; theme
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load-theme 'tango-dark)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-mode
