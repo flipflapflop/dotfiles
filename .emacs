@@ -431,3 +431,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-hook 'latex-mode-hook 'turn-on-flyspell)
 (setq ispell-dictionary "en_GB-ize") ;set the default dictionary
+
+(set-face-attribute 'default nil :height 140)
