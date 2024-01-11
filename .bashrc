@@ -22,7 +22,7 @@ if [ -f ${SPACK_DIR}/share/spack/setup-env.sh ]; then
         else
             export SPACK_LOADED=0
         fi
-    fi    
+    fi
     
     if [ $SPACK_LOADED -eq 0 ]
     then

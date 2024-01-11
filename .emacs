@@ -433,3 +433,4 @@
 (setq ispell-dictionary "en_GB-ize") ;set the default dictionary
 
 (set-face-attribute 'default nil :height 140)
+(put 'downcase-region 'disabled nil)
