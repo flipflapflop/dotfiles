@@ -9,7 +9,7 @@ genpasswd () {
 function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 
 # Find large files on home:
-function fl() { find $HOME -type f -size +50M -printf '%s %p\n' | numfmt --field=1 --to=iec-i }
+function fl() { find $HOME -type f -size +50M -printf '%s %p\n' | numfmt --field=1 --to=iec-i; }
 
 
 function extract()      # Handy Extract Program
