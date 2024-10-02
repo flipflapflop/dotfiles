@@ -8,6 +8,10 @@ genpasswd () {
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 
+# Find large files on home:
+function fl() { find $HOME -type f -size +50M -printf '%s %p\n' | numfmt --field=1 --to=iec-i }
+
+
 function extract()      # Handy Extract Program
 {
     if [ -f $1 ] ; then
@@ -38,3 +42,4 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
+
