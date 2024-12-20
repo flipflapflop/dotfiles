@@ -429,6 +429,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Spell checking
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (add-hook 'latex-mode-hook 'turn-on-flyspell)
 (setq ispell-dictionary "en_GB-ize") ;set the default dictionary
 
