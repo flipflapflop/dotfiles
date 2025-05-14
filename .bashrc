@@ -2,7 +2,7 @@ if [ -f .bash_setup_env ]; then
     . .bash_setup_env
 fi
 
-# shopt -s direxpand
+shopt -s direxpand
 
 #-------------------------------------------------------------
 # spack
