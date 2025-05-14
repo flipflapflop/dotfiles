@@ -351,6 +351,8 @@
           (lambda ()
             (c-set-offset 'arglist-close '++)))
 
+(c-set-offset 'innamespace '0)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CUDA MODE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
