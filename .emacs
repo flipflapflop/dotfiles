@@ -387,7 +387,7 @@
  ;; If there is more than one, they won't work right.
  '(load-home-init-file t t)
  '(package-selected-packages
-   '(cmake-mode counsel-etags graphviz-dot-mode yaml-mode impatient-mode clang-format magit)))
+   '(markdown-mode julia-mode cmake-mode counsel-etags graphviz-dot-mode yaml-mode impatient-mode clang-format magit)))
 ;; (custom-set-faces
 ;;  ;; custom-set-faces was added by Custom.
 ;;  ;; If you edit it by hand, you could mess it up, so be careful.
