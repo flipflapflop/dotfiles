@@ -51,7 +51,7 @@ function mktags() {
         echo "mktags: '$dir' is not a valid directory"
         return 1
     fi
-    ctags -R --exclude=.git -f "${dir}/tags" "$dir"
+    ctags -R --output-format=etags --exclude=.git -f "${dir}/tags" "$dir"
     echo "tags file generated in '${dir}/tags'"
 }
 

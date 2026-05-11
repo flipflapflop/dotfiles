@@ -448,6 +448,8 @@
   :ensure t
   :bind (("C-]" . counsel-etags-find-tag-at-point)))
 
+(setq counsel-etags-tags-file-name "tags")  ; filename to search for
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; markdown-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
