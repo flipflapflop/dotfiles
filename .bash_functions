@@ -43,3 +43,15 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
+# Generate a ctags file for the given directory in arguments or
+# defaults to current directory if no arguments is given.
+function mktags() {
+    local dir="${1:-.}"
+    if [ ! -d "$dir" ]; then
+        echo "mktags: '$dir' is not a valid directory"
+        return 1
+    fi
+    ctags -R --exclude=.git -f "${dir}/tags" "$dir"
+    echo "tags file generated in '${dir}/tags'"
+}
+
